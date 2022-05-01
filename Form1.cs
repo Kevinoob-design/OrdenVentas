@@ -1,5 +1,5 @@
-﻿using OrdenVentas.db;
-using OrdenVentas.entities;
+﻿using OV_Datos;
+using OV_Entidad;
 using OrdenVentas.shared;
 using System;
 using System.Collections.Generic;

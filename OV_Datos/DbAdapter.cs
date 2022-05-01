@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace OrdenVentas.db
+namespace OV_Datos
 {
-    internal static class DbAdapter
+    public static class DbAdapter
     {
         private static SqlConnection sqlConnection;
         private static SqlCommand sqlCommand;
