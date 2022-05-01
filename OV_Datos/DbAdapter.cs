@@ -9,8 +9,6 @@ namespace OV_Datos
     public static class DbAdapter
     {
         private static SqlConnection con;
-        //private static SqlCommand cmd;
-        //private static SqlDataReader dr;
 
         public static void InitializeConnection()
         {
