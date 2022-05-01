@@ -53,9 +53,9 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> items = null) where T : new()
+        public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> spParams = null) where T : new()
         {
-            SqlCommand cmd = PrepareSp(spName, items);
+            SqlCommand cmd = PrepareSp(spName, spParams);
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -82,13 +82,13 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static SqlCommand PrepareSp(string spName, Dictionary<string, string> items = null)
+        public static SqlCommand PrepareSp(string spName, Dictionary<string, string> spParams = null)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = spName;
 
-            foreach (var item in items)
+            foreach (var item in spParams)
             {
                 cmd.Parameters.AddWithValue($"@{item.Key}", item.Value);
             }
@@ -96,9 +96,9 @@ namespace OV_Datos
             return cmd;
         }
 
-        public static DataSet LoadDataBackToDataSet(string srcTable, string spName, Dictionary<string, string> items = null)
+        public static DataSet LoadDataBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
         {
-            SqlCommand cmd = PrepareSp(spName, items);
+            SqlCommand cmd = PrepareSp(spName, spParams);
 
             SqlDataAdapter da = new SqlDataAdapter($"{cmd.CommandText} {cmd.Parameters}", con);
 

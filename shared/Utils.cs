@@ -16,19 +16,20 @@ namespace OrdenVentas.shared
             foreach (var control in controls)
             {
                 bool isButtonOrLabel = control is Button || control is Label;
-                bool hasTagAndTextValue = control.Tag != "" && control.Text != "";
+                string tag = control.Tag != null ? control.Tag.ToString() : "";
+                bool hasTagAndTextIsNotEmpty = tag.Length > 0;
 
-                if (!isButtonOrLabel && hasTagAndTextValue)
+                if (!isButtonOrLabel && hasTagAndTextIsNotEmpty)
                 {
-                    bool isKeyValueOnCollection = collection.ContainsKey(control.Tag.ToString());
+                    bool isKeyValueOnCollection = collection.ContainsKey(tag);
 
                     if (!isKeyValueOnCollection)
                     {
-                        collection[control.Tag.ToString()] = control.Text;
+                        collection[tag] = control.Text;
                     }
                     else
                     {
-                        collection[control.Tag.ToString()] += " " + control.Text;
+                        collection[tag] += " " + control.Text;
                     }
                 }
 
