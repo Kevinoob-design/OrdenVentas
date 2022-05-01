@@ -12,7 +12,6 @@ namespace OrdenVentas
         public Form1()
         {
             InitializeComponent();
-            DbAdapter.InitializeConnection();
             GetDataFromDB();
         }
 

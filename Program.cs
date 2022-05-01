@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using OV_Datos;
 
 namespace OrdenVentas
 {
@@ -16,6 +14,7 @@ namespace OrdenVentas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DbAdapter.InitializeConnection();
             Application.Run(new MainMenu());
         }
     }

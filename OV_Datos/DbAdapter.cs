@@ -8,9 +8,9 @@ namespace OV_Datos
 {
     public static class DbAdapter
     {
-        private static SqlConnection sqlConnection;
-        private static SqlCommand sqlCommand;
-        private static SqlDataReader dr;
+        private static SqlConnection con;
+        //private static SqlCommand cmd;
+        //private static SqlDataReader dr;
 
         public static void InitializeConnection()
         {
@@ -20,17 +20,17 @@ namespace OV_Datos
             string UserID = ConfigurationManager.AppSettings.Get("UserID");
             string Password = ConfigurationManager.AppSettings.Get("Password");
 
-            sqlConnection = new SqlConnection($"{Source} {InitialCat} {IntSecuirity} {UserID} {Password}");
-            sqlConnection.Open();
+            con = new SqlConnection($"{Source} {InitialCat} {IntSecuirity} {UserID} {Password}");
+            con.Open();
         }
 
         public static List<T> LoadTable<T>(string tableName, string fields = "*", string where = "") where T : new()
         {
-            sqlCommand = sqlConnection.CreateCommand();
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = $"SELECT {fields} FROM {tableName} {where}";
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT {fields} FROM {tableName} {where}";
 
-            dr = sqlCommand.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader();
 
             List<T> listOfItems = new List<T>();
 
@@ -55,21 +55,11 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static List<T> LoadWithSp<T>(Dictionary<string, string> items, string spName) where T : new()
+        public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> items = null) where T : new()
         {
-            sqlCommand = sqlConnection.CreateCommand();
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.CommandText = spName;
+            SqlCommand cmd = PrepareSp(spName, items);
 
-            if (items != null)
-            {
-                foreach (var item in items)
-                {
-                    sqlCommand.Parameters.AddWithValue($"@{item.Key}", item.Value);
-                }
-            }
-
-            dr = sqlCommand.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader();
 
             List<T> listOfItems = new List<T>();
 
@@ -94,18 +84,31 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static void RunSp(Dictionary<string, string> items, string spName)
+        public static SqlCommand PrepareSp(string spName, Dictionary<string, string> items = null)
         {
-            sqlCommand = sqlConnection.CreateCommand();
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.CommandText = spName;
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = spName;
 
             foreach (var item in items)
             {
-                sqlCommand.Parameters.AddWithValue($"@{item.Key}", item.Value);
+                cmd.Parameters.AddWithValue($"@{item.Key}", item.Value);
             }
 
-            sqlCommand.ExecuteNonQuery();
+            return cmd;
+        }
+
+        public static DataSet LoadDataBackToDataSet(string srcTable, string spName, Dictionary<string, string> items = null)
+        {
+            SqlCommand cmd = PrepareSp(spName, items);
+
+            SqlDataAdapter da = new SqlDataAdapter($"{cmd.CommandText} {cmd.Parameters}", con);
+
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, srcTable);
+
+            return ds;
         }
     }
 }
