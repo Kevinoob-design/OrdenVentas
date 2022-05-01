@@ -18,12 +18,12 @@ namespace OrdenVentas
 
         public void GetDataFromDB()
         {
-            List<User> users = DbAdapter.LoadTable<User>("[USER]");
+            List<Usuario> users = DbAdapter.LoadTable<Usuario>("[USER]");
 
-            Utils.SetControlsChildWithValueFromCollection<User>(users[0], panel1);
+            Utils.SetControlsChildWithValueFromCollection(users[0], panel1);
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> keyValues = Utils.GetCollectionKeyValueFromControlsTags(panel1);
 
