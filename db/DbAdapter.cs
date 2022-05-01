@@ -43,7 +43,7 @@ namespace OrdenVentas.db
                 {
                     object boxed = item;
 
-                    type.GetProperty(dr.GetName(i)).SetValue(boxed, dr.GetValue(i));
+                    type.GetProperty(dr.GetName(i))?.SetValue(boxed, dr.GetValue(i));
 
                     item = (T)boxed;
                 }
