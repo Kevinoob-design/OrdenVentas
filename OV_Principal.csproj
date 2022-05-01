@@ -126,6 +126,10 @@
       <Project>{d0c5533f-a533-4839-8a1a-ae2289742726}</Project>
       <Name>OV_Entidad</Name>
     </ProjectReference>
+    <ProjectReference Include="OV_Negocio\OV_Negocio.csproj">
+      <Project>{ec6827db-f5e9-478e-97d7-ea1e995cac4f}</Project>
+      <Name>OV_Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
