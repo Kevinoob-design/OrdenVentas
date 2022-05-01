@@ -15,7 +15,8 @@ namespace OrdenVentas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DbAdapter.InitializeConnection();
-            Application.Run(new MainMenu());
+            Application.Run(new Form1());
+            //Application.Run(new MainMenu());
         }
     }
 }

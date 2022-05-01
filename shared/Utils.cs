@@ -29,7 +29,7 @@ namespace OrdenVentas.shared
                     }
                     else
                     {
-                        collection[tag] += " " + control.Text;
+                        collection[tag] += $" {control.Text}";
                     }
                 }
 

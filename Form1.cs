@@ -17,7 +17,7 @@ namespace OrdenVentas
 
         public void GetDataFromDB()
         {
-            List<Usuario> users = DbAdapter.LoadTable<Usuario>("[USER]");
+            List<UserForTest> users = DbAdapter.LoadTable<UserForTest>("[USER]");
 
             Utils.SetControlsChildWithValueFromCollection(users[0], panel1);
         }
