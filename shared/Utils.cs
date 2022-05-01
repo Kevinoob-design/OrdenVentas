@@ -9,7 +9,7 @@ namespace OrdenVentas.shared
 {
     internal static class Utils
     {
-        private static Dictionary<string, string> GetCollectionKeyValueFromControlsTags(params Control[] controls)
+        public static Dictionary<string, string> GetCollectionKeyValueFromControlsTags(params Control[] controls)
         {
             Dictionary<string, string> collection = new Dictionary<string, string>();
 
@@ -38,7 +38,7 @@ namespace OrdenVentas.shared
                 {
                     foreach (var child in childControls)
                     {
-                        GetCollectionKeyValueFromControlsTags(child);
+                        collection = collection.Concat(GetCollectionKeyValueFromControlsTags(child)).ToDictionary(x => x.Key, x => x.Value);
                     }
                 }
             }
@@ -46,7 +46,7 @@ namespace OrdenVentas.shared
             return collection;
         }
 
-        private static void SetControlsChildWithValueFromCollection<T>(T collection, params Control[] controls)
+        public static void SetControlsChildWithValueFromCollection<T>(T collection, params Control[] controls)
         {
             foreach (var control in controls)
             {

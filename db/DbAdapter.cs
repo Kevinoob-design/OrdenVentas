@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -13,13 +14,13 @@ namespace OrdenVentas.db
 
         public static void InitializeConnection()
         {
-            string Source = "";
-            string InitialCat = "";
-            // string IntSecuirity = "";
-            string UserID = "";
-            string Password = "";
+            string Source = ConfigurationManager.AppSettings.Get("Source");
+            string InitialCat = ConfigurationManager.AppSettings.Get("InitialCat");
+            string IntSecuirity = ConfigurationManager.AppSettings.Get("IntSecuirity");
+            string UserID = ConfigurationManager.AppSettings.Get("UserID");
+            string Password = ConfigurationManager.AppSettings.Get("Password");
 
-            sqlConnection = new SqlConnection($"{Source} {InitialCat} {UserID} {Password}");
+            sqlConnection = new SqlConnection($"{Source} {InitialCat} {IntSecuirity} {UserID} {Password}");
             sqlConnection.Open();
         }
 
