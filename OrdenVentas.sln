@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OV_Datos", "OV_Datos\OV_Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OV_Entidad", "OV_Entidad\OV_Entidad.csproj", "{D0C5533F-A533-4839-8A1A-AE2289742726}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OV_Negocio", "OV_Negocio\OV_Negocio.csproj", "{EC6827DB-F5E9-478E-97D7-EA1E995CAC4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D0C5533F-A533-4839-8A1A-AE2289742726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C5533F-A533-4839-8A1A-AE2289742726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C5533F-A533-4839-8A1A-AE2289742726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6827DB-F5E9-478E-97D7-EA1E995CAC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6827DB-F5E9-478E-97D7-EA1E995CAC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6827DB-F5E9-478E-97D7-EA1E995CAC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6827DB-F5E9-478E-97D7-EA1E995CAC4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
