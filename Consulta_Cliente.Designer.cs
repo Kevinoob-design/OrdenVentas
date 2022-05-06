@@ -48,14 +48,16 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverAlMenuPrincipalToolStripMenuItem,
             this.nuevoClienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(799, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(987, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +65,7 @@
             // 
             this.volverAlMenuPrincipalToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.volverAlMenuPrincipalToolStripMenuItem.Name = "volverAlMenuPrincipalToolStripMenuItem";
-            this.volverAlMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.volverAlMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(216, 29);
             this.volverAlMenuPrincipalToolStripMenuItem.Text = "Volver al Menu Principal";
             this.volverAlMenuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.volverAlMenuPrincipalToolStripMenuItem_Click);
             // 
@@ -71,26 +73,24 @@
             // 
             this.nuevoClienteToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(138, 29);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // bConsultar_cc
             // 
-            this.bConsultar_cc.Location = new System.Drawing.Point(518, 9);
-            this.bConsultar_cc.Margin = new System.Windows.Forms.Padding(2);
+            this.bConsultar_cc.Location = new System.Drawing.Point(777, 14);
             this.bConsultar_cc.Name = "bConsultar_cc";
-            this.bConsultar_cc.Size = new System.Drawing.Size(124, 32);
+            this.bConsultar_cc.Size = new System.Drawing.Size(186, 49);
             this.bConsultar_cc.TabIndex = 1;
             this.bConsultar_cc.Text = "Consultar";
             this.bConsultar_cc.UseVisualStyleBackColor = true;
             // 
             // bLimpiar_cc
             // 
-            this.bLimpiar_cc.Location = new System.Drawing.Point(518, 47);
-            this.bLimpiar_cc.Margin = new System.Windows.Forms.Padding(2);
+            this.bLimpiar_cc.Location = new System.Drawing.Point(777, 72);
             this.bLimpiar_cc.Name = "bLimpiar_cc";
-            this.bLimpiar_cc.Size = new System.Drawing.Size(124, 32);
+            this.bLimpiar_cc.Size = new System.Drawing.Size(186, 49);
             this.bLimpiar_cc.TabIndex = 2;
             this.bLimpiar_cc.Text = "Nueva Consulta";
             this.bLimpiar_cc.UseVisualStyleBackColor = true;
@@ -98,20 +98,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Codigo ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nombre";
             // 
@@ -121,46 +119,41 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCC.Location = new System.Drawing.Point(0, 124);
-            this.dataGridViewCC.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCC.Location = new System.Drawing.Point(12, 206);
             this.dataGridViewCC.Name = "dataGridViewCC";
             this.dataGridViewCC.RowHeadersWidth = 62;
             this.dataGridViewCC.RowTemplate.Height = 33;
-            this.dataGridViewCC.Size = new System.Drawing.Size(799, 164);
+            this.dataGridViewCC.Size = new System.Drawing.Size(963, 274);
             this.dataGridViewCC.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 61);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(129, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Num Documento";
             // 
             // tbcodigo_cliente_cc
             // 
-            this.tbcodigo_cliente_cc.Location = new System.Drawing.Point(96, 9);
-            this.tbcodigo_cliente_cc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbcodigo_cliente_cc.Location = new System.Drawing.Point(144, 14);
             this.tbcodigo_cliente_cc.Name = "tbcodigo_cliente_cc";
-            this.tbcodigo_cliente_cc.Size = new System.Drawing.Size(130, 20);
+            this.tbcodigo_cliente_cc.Size = new System.Drawing.Size(193, 26);
             this.tbcodigo_cliente_cc.TabIndex = 8;
             // 
             // tbnombre_cliente_cc
             // 
-            this.tbnombre_cliente_cc.Location = new System.Drawing.Point(96, 36);
-            this.tbnombre_cliente_cc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbnombre_cliente_cc.Location = new System.Drawing.Point(144, 55);
             this.tbnombre_cliente_cc.Name = "tbnombre_cliente_cc";
-            this.tbnombre_cliente_cc.Size = new System.Drawing.Size(130, 20);
+            this.tbnombre_cliente_cc.Size = new System.Drawing.Size(193, 26);
             this.tbnombre_cliente_cc.TabIndex = 9;
             // 
             // tbnum_documento_cc
             // 
-            this.tbnum_documento_cc.Location = new System.Drawing.Point(96, 59);
-            this.tbnum_documento_cc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbnum_documento_cc.Location = new System.Drawing.Point(144, 91);
             this.tbnum_documento_cc.Name = "tbnum_documento_cc";
-            this.tbnum_documento_cc.Size = new System.Drawing.Size(130, 20);
+            this.tbnum_documento_cc.Size = new System.Drawing.Size(193, 26);
             this.tbnum_documento_cc.TabIndex = 10;
             // 
             // ConsultaClientePanel
@@ -175,21 +168,21 @@
             this.ConsultaClientePanel.Controls.Add(this.label1);
             this.ConsultaClientePanel.Controls.Add(this.label3);
             this.ConsultaClientePanel.Controls.Add(this.label2);
-            this.ConsultaClientePanel.Location = new System.Drawing.Point(0, 27);
+            this.ConsultaClientePanel.Location = new System.Drawing.Point(0, 42);
+            this.ConsultaClientePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ConsultaClientePanel.Name = "ConsultaClientePanel";
-            this.ConsultaClientePanel.Size = new System.Drawing.Size(799, 92);
+            this.ConsultaClientePanel.Size = new System.Drawing.Size(987, 142);
             this.ConsultaClientePanel.TabIndex = 11;
             // 
             // Consulta_Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 299);
+            this.ClientSize = new System.Drawing.Size(987, 502);
             this.Controls.Add(this.dataGridViewCC);
             this.Controls.Add(this.ConsultaClientePanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Consulta_Cliente";
             this.Text = "Consulta_Cliente";
             this.menuStrip1.ResumeLayout(false);

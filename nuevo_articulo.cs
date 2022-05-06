@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace OrdenVentas
 {
-    public partial class Login : Form
+    public partial class nuevo_articulo : Form
     {
-        public Login()
+        public nuevo_articulo()
         {
             InitializeComponent();
         }
 
-        private void bsalir_Click(object sender, EventArgs e)
+        private void volverAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MainMenu nVolver_mm = new MainMenu();
+            nVolver_mm.Show();
+            this.Hide();
         }
     }
 }

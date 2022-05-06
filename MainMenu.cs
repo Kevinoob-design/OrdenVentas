@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 
 
+
 namespace OrdenVentas
 {
     public partial class MainMenu : Form
@@ -40,11 +41,51 @@ namespace OrdenVentas
             this.Hide();
         }
 
-        private void consultaCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void consultaCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+         //  consulta_categoria nVolver_cctg = new consulta_categoria();
+          // nVolver_cctg.Show();
+          // this.Hide();
+       // }
+
+        private void MainMenu_Load(object sender, EventArgs e)
         {
-           // consulta_categoria nVolver_cctg = new consulta_categoria();
-           // nVolver_cctg.Show();
+
+        }
+
+        //private void nuevaCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+            //nueva_categoria nVolver_nctg = new nueva_categoria();
+            //nVolver_nctg.Show();
             //this.Hide();
+       // }
+
+        private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            nueva_categoria nVolver_nctg = new nueva_categoria();
+            nVolver_nctg.Show();
+            this.Hide();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nuevo_articulo nVolver_nart = new nuevo_articulo();
+            nVolver_nart.Show();
+            this.Hide();
+        }
+
+        private void detallesDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nueva_Venta nVolver_nvent = new Nueva_Venta();
+            nVolver_nvent.Show();
+            this.Hide();
+        }
+
+        private void detalleVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Detalle_Ventas nVolver_dvent = new Detalle_Ventas();
+            nVolver_dvent.Show();
+            this.Hide();
         }
     }
 }

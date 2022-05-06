@@ -53,11 +53,11 @@
     <Compile Include="Consulta_Cliente.Designer.cs">
       <DependentUpon>Consulta_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Detalle_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Detalle_Ventas.Designer.cs">
+      <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -71,6 +71,24 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="nueva_categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nueva_categoria.Designer.cs">
+      <DependentUpon>nueva_categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nueva_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nueva_Venta.Designer.cs">
+      <DependentUpon>Nueva_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nuevo_articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevo_articulo.Designer.cs">
+      <DependentUpon>nuevo_articulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nuevo_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,14 +101,23 @@
     <EmbeddedResource Include="Consulta_Cliente.resx">
       <DependentUpon>Consulta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Detalle_Ventas.resx">
+      <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nueva_categoria.resx">
+      <DependentUpon>nueva_categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nueva_Venta.resx">
+      <DependentUpon>Nueva_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevo_articulo.resx">
+      <DependentUpon>nuevo_articulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Cliente.resx">
       <DependentUpon>Nuevo_Cliente.cs</DependentUpon>
