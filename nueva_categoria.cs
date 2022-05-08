@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrdenVentas
 {
-    public partial class nueva_categoria : Form
+    public partial class Nueva_Categoria : Form
     {
-        public nueva_categoria()
+        public Nueva_Categoria()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace OrdenVentas
 {
-    partial class nuevo_articulo
+    partial class Nuevo_Articulo
     {
         /// <summary>
         /// Required designer variable.

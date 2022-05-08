@@ -62,14 +62,14 @@ namespace OrdenVentas
 
         private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            nueva_categoria nVolver_nctg = new nueva_categoria();
+            Nueva_Categoria nVolver_nctg = new Nueva_Categoria();
             nVolver_nctg.Show();
             this.Hide();
         }
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nuevo_articulo nVolver_nart = new nuevo_articulo();
+            Nuevo_Articulo nVolver_nart = new Nuevo_Articulo();
             nVolver_nart.Show();
             this.Hide();
         }

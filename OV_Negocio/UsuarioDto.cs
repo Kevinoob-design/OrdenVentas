@@ -13,7 +13,9 @@ namespace OV_Negocio
 
             if (!usuarioParams.ContainsKey("PASSWORD")) throw new Exception("La propiedad de password debe estar presente");
 
-            List<Usuario> usuario = DbAdapter.LoadDataFromSp<Usuario>("consultarUsuario", usuarioParams);
+            string spNameLogin = storedProcedures.consultarUsuario.ToString();
+
+            List<Usuario> usuario = DbAdapter.LoadDataFromSp<Usuario>(spNameLogin, usuarioParams);
 
             return usuario.Count > 0 ? true : false;
         }
