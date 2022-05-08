@@ -103,7 +103,7 @@ namespace OV_Datos
             return cmd;
         }
 
-        public static DataSet LoadDataBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
+        public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
         {
             SqlCommand cmd = PrepareSp(spName, spParams);
 

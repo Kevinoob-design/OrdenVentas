@@ -13,7 +13,7 @@ namespace OV_Negocio
             string tableConsultarClientes = tables.CLIENTES.ToString();
             string spNameConsultarClientes = storedProcedures.consultarClientes.ToString();
 
-            return DbAdapter.LoadDataBackToDataSetWithSp(tableConsultarClientes, spNameConsultarClientes, clienteParams);
+            return DbAdapter.LoadBackToDataSetWithSp(tableConsultarClientes, spNameConsultarClientes, clienteParams);
         }
 
         public void guardar(Dictionary<string, string> clienteParams)
