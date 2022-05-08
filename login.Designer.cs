@@ -42,7 +42,7 @@
             // bacceso
             // 
             this.bacceso.Location = new System.Drawing.Point(37, 153);
-            this.bacceso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bacceso.Margin = new System.Windows.Forms.Padding(2);
             this.bacceso.Name = "bacceso";
             this.bacceso.Size = new System.Drawing.Size(67, 27);
             this.bacceso.TabIndex = 0;
@@ -53,7 +53,7 @@
             // bsalir
             // 
             this.bsalir.Location = new System.Drawing.Point(154, 153);
-            this.bsalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bsalir.Margin = new System.Windows.Forms.Padding(2);
             this.bsalir.Name = "bsalir";
             this.bsalir.Size = new System.Drawing.Size(67, 27);
             this.bsalir.TabIndex = 1;
@@ -84,7 +84,7 @@
             // tbusuario
             // 
             this.tbusuario.Location = new System.Drawing.Point(109, 77);
-            this.tbusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbusuario.Margin = new System.Windows.Forms.Padding(2);
             this.tbusuario.Name = "tbusuario";
             this.tbusuario.Size = new System.Drawing.Size(112, 20);
             this.tbusuario.TabIndex = 4;
@@ -93,11 +93,12 @@
             // tbclave
             // 
             this.tbclave.Location = new System.Drawing.Point(109, 113);
-            this.tbclave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbclave.Margin = new System.Windows.Forms.Padding(2);
             this.tbclave.Name = "tbclave";
             this.tbclave.Size = new System.Drawing.Size(112, 20);
             this.tbclave.TabIndex = 5;
             this.tbclave.Tag = "PASSWORD";
+            this.tbclave.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -130,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(322, 221);
             this.Controls.Add(this.LoginPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(338, 260);
             this.MinimumSize = new System.Drawing.Size(338, 260);
             this.Name = "Login";

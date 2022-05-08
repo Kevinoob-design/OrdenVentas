@@ -82,7 +82,14 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static SqlCommand PrepareSp(string spName, Dictionary<string, string> spParams = null)
+        public static void ExecSp(string spName, Dictionary<string, string> spParams = null)
+        {
+            SqlCommand cmd = PrepareSp(spName, spParams);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        private static SqlCommand PrepareSp(string spName, Dictionary<string, string> spParams = null)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -100,7 +107,7 @@ namespace OV_Datos
         {
             SqlCommand cmd = PrepareSp(spName, spParams);
 
-            SqlDataAdapter da = new SqlDataAdapter($"{cmd.CommandText} {cmd.Parameters}", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
 

@@ -31,9 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ClientesDgv = new System.Windows.Forms.DataGridView();
+            this.AgregarCliente = new System.Windows.Forms.Button();
+            this.ActualizarCliente = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,15 +44,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbcodigo_nc = new System.Windows.Forms.TextBox();
             this.tbnombre_nc = new System.Windows.Forms.TextBox();
-            this.tbtipo_documento_nc = new System.Windows.Forms.TextBox();
             this.tbnum_documento_nc = new System.Windows.Forms.TextBox();
             this.tb_direccion_nc = new System.Windows.Forms.TextBox();
             this.tb_telefono_nc = new System.Windows.Forms.TextBox();
             this.tb_correo_nc = new System.Windows.Forms.TextBox();
-            this.MainMenuPanel = new System.Windows.Forms.Panel();
+            this.MantenimientoClientePanel = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.MainMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDgv)).BeginInit();
+            this.MantenimientoClientePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -85,44 +87,52 @@
             this.consultaClienteToolStripMenuItem.Text = "Consulta Cliente";
             this.consultaClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaClienteToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // ClientesDgv
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ClientesDgv.AllowUserToAddRows = false;
+            this.ClientesDgv.AllowUserToDeleteRows = false;
+            this.ClientesDgv.AllowUserToOrderColumns = true;
+            this.ClientesDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 216);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(806, 245);
-            this.dataGridView1.TabIndex = 1;
+            this.ClientesDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.ClientesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientesDgv.Location = new System.Drawing.Point(11, 254);
+            this.ClientesDgv.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientesDgv.Name = "ClientesDgv";
+            this.ClientesDgv.ReadOnly = true;
+            this.ClientesDgv.RowHeadersWidth = 62;
+            this.ClientesDgv.RowTemplate.Height = 33;
+            this.ClientesDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ClientesDgv.Size = new System.Drawing.Size(803, 207);
+            this.ClientesDgv.TabIndex = 1;
             // 
-            // button1
+            // AgregarCliente
             // 
-            this.button1.Location = new System.Drawing.Point(527, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AgregarCliente.Location = new System.Drawing.Point(527, 12);
+            this.AgregarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarCliente.Name = "AgregarCliente";
+            this.AgregarCliente.Size = new System.Drawing.Size(100, 25);
+            this.AgregarCliente.TabIndex = 2;
+            this.AgregarCliente.Text = "Agregar";
+            this.AgregarCliente.UseVisualStyleBackColor = true;
+            this.AgregarCliente.Click += new System.EventHandler(this.AgregarCliente_Click);
             // 
-            // button2
+            // ActualizarCliente
             // 
-            this.button2.Location = new System.Drawing.Point(527, 52);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 25);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ActualizarCliente.Location = new System.Drawing.Point(527, 52);
+            this.ActualizarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.ActualizarCliente.Name = "ActualizarCliente";
+            this.ActualizarCliente.Size = new System.Drawing.Size(100, 25);
+            this.ActualizarCliente.TabIndex = 3;
+            this.ActualizarCliente.Text = "Actualizar";
+            this.ActualizarCliente.UseVisualStyleBackColor = true;
+            this.ActualizarCliente.Click += new System.EventHandler(this.ActualizarCliente_Click);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(527, 96);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 25);
             this.button3.TabIndex = 4;
@@ -142,7 +152,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 35);
+            this.label2.Location = new System.Drawing.Point(11, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
@@ -152,7 +162,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 58);
+            this.label3.Location = new System.Drawing.Point(11, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 13);
@@ -162,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 108);
+            this.label4.Location = new System.Drawing.Point(11, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
@@ -172,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 130);
+            this.label5.Location = new System.Drawing.Point(11, 159);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -182,7 +192,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 155);
+            this.label6.Location = new System.Drawing.Point(11, 184);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
@@ -192,7 +202,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 83);
+            this.label7.Location = new System.Drawing.Point(11, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 13);
@@ -201,102 +211,137 @@
             // 
             // tbcodigo_nc
             // 
-            this.tbcodigo_nc.Location = new System.Drawing.Point(120, 12);
-            this.tbcodigo_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcodigo_nc.Location = new System.Drawing.Point(120, 9);
+            this.tbcodigo_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbcodigo_nc.Name = "tbcodigo_nc";
+            this.tbcodigo_nc.ReadOnly = true;
             this.tbcodigo_nc.Size = new System.Drawing.Size(233, 20);
             this.tbcodigo_nc.TabIndex = 12;
+            this.tbcodigo_nc.Tag = "ID";
             // 
             // tbnombre_nc
             // 
-            this.tbnombre_nc.Location = new System.Drawing.Point(120, 35);
-            this.tbnombre_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnombre_nc.Location = new System.Drawing.Point(120, 60);
+            this.tbnombre_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbnombre_nc.Name = "tbnombre_nc";
             this.tbnombre_nc.Size = new System.Drawing.Size(233, 20);
             this.tbnombre_nc.TabIndex = 13;
-            // 
-            // tbtipo_documento_nc
-            // 
-            this.tbtipo_documento_nc.Location = new System.Drawing.Point(120, 59);
-            this.tbtipo_documento_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbtipo_documento_nc.Name = "tbtipo_documento_nc";
-            this.tbtipo_documento_nc.Size = new System.Drawing.Size(233, 20);
-            this.tbtipo_documento_nc.TabIndex = 14;
+            this.tbnombre_nc.Tag = "NOMBRE";
             // 
             // tbnum_documento_nc
             // 
-            this.tbnum_documento_nc.Location = new System.Drawing.Point(120, 80);
-            this.tbnum_documento_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnum_documento_nc.Location = new System.Drawing.Point(120, 111);
+            this.tbnum_documento_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbnum_documento_nc.Name = "tbnum_documento_nc";
             this.tbnum_documento_nc.Size = new System.Drawing.Size(233, 20);
             this.tbnum_documento_nc.TabIndex = 15;
+            this.tbnum_documento_nc.Tag = "NUM_DOCUMENTO";
             // 
             // tb_direccion_nc
             // 
-            this.tb_direccion_nc.Location = new System.Drawing.Point(120, 105);
-            this.tb_direccion_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_direccion_nc.Location = new System.Drawing.Point(120, 135);
+            this.tb_direccion_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_direccion_nc.Name = "tb_direccion_nc";
             this.tb_direccion_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_direccion_nc.TabIndex = 16;
+            this.tb_direccion_nc.Tag = "DIRECCION";
             // 
             // tb_telefono_nc
             // 
-            this.tb_telefono_nc.Location = new System.Drawing.Point(120, 129);
-            this.tb_telefono_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_telefono_nc.Location = new System.Drawing.Point(120, 159);
+            this.tb_telefono_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_telefono_nc.Name = "tb_telefono_nc";
             this.tb_telefono_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_telefono_nc.TabIndex = 17;
+            this.tb_telefono_nc.Tag = "TELEFONO";
             // 
             // tb_correo_nc
             // 
-            this.tb_correo_nc.Location = new System.Drawing.Point(120, 152);
-            this.tb_correo_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_correo_nc.Location = new System.Drawing.Point(120, 183);
+            this.tb_correo_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_correo_nc.Name = "tb_correo_nc";
             this.tb_correo_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_correo_nc.TabIndex = 18;
+            this.tb_correo_nc.Tag = "EMAIL";
             // 
-            // MainMenuPanel
+            // MantenimientoClientePanel
             // 
-            this.MainMenuPanel.Controls.Add(this.label1);
-            this.MainMenuPanel.Controls.Add(this.tb_correo_nc);
-            this.MainMenuPanel.Controls.Add(this.button1);
-            this.MainMenuPanel.Controls.Add(this.tb_telefono_nc);
-            this.MainMenuPanel.Controls.Add(this.button2);
-            this.MainMenuPanel.Controls.Add(this.tb_direccion_nc);
-            this.MainMenuPanel.Controls.Add(this.button3);
-            this.MainMenuPanel.Controls.Add(this.tbnum_documento_nc);
-            this.MainMenuPanel.Controls.Add(this.label2);
-            this.MainMenuPanel.Controls.Add(this.tbtipo_documento_nc);
-            this.MainMenuPanel.Controls.Add(this.label3);
-            this.MainMenuPanel.Controls.Add(this.tbnombre_nc);
-            this.MainMenuPanel.Controls.Add(this.label4);
-            this.MainMenuPanel.Controls.Add(this.tbcodigo_nc);
-            this.MainMenuPanel.Controls.Add(this.label5);
-            this.MainMenuPanel.Controls.Add(this.label7);
-            this.MainMenuPanel.Controls.Add(this.label6);
-            this.MainMenuPanel.Location = new System.Drawing.Point(0, 27);
-            this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(633, 181);
-            this.MainMenuPanel.TabIndex = 19;
+            this.MantenimientoClientePanel.Controls.Add(this.comboBox2);
+            this.MantenimientoClientePanel.Controls.Add(this.label8);
+            this.MantenimientoClientePanel.Controls.Add(this.comboBox1);
+            this.MantenimientoClientePanel.Controls.Add(this.label1);
+            this.MantenimientoClientePanel.Controls.Add(this.tb_correo_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.AgregarCliente);
+            this.MantenimientoClientePanel.Controls.Add(this.tb_telefono_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.ActualizarCliente);
+            this.MantenimientoClientePanel.Controls.Add(this.tb_direccion_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.button3);
+            this.MantenimientoClientePanel.Controls.Add(this.tbnum_documento_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.label2);
+            this.MantenimientoClientePanel.Controls.Add(this.label3);
+            this.MantenimientoClientePanel.Controls.Add(this.tbnombre_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.label4);
+            this.MantenimientoClientePanel.Controls.Add(this.tbcodigo_nc);
+            this.MantenimientoClientePanel.Controls.Add(this.label5);
+            this.MantenimientoClientePanel.Controls.Add(this.label7);
+            this.MantenimientoClientePanel.Controls.Add(this.label6);
+            this.MantenimientoClientePanel.Location = new System.Drawing.Point(0, 27);
+            this.MantenimientoClientePanel.Name = "MantenimientoClientePanel";
+            this.MantenimientoClientePanel.Size = new System.Drawing.Size(633, 222);
+            this.MantenimientoClientePanel.TabIndex = 19;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cliente",
+            "Proveedor"});
+            this.comboBox1.Location = new System.Drawing.Point(120, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 21);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.Tag = "TIPO_CLIENTE";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 38);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Tipo Cliente";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Cedula",
+            "Pasaporte"});
+            this.comboBox2.Location = new System.Drawing.Point(120, 85);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(233, 21);
+            this.comboBox2.TabIndex = 21;
+            this.comboBox2.Tag = "TIPO_DOCUMENTO";
             // 
             // Nuevo_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 469);
-            this.Controls.Add(this.MainMenuPanel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MantenimientoClientePanel);
+            this.Controls.Add(this.ClientesDgv);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Nuevo_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo_Cliente";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.MainMenuPanel.ResumeLayout(false);
-            this.MainMenuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDgv)).EndInit();
+            this.MantenimientoClientePanel.ResumeLayout(false);
+            this.MantenimientoClientePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,9 +351,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem volverAlMenuPrincipalToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView ClientesDgv;
+        private System.Windows.Forms.Button AgregarCliente;
+        private System.Windows.Forms.Button ActualizarCliente;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -319,12 +364,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbcodigo_nc;
         private System.Windows.Forms.TextBox tbnombre_nc;
-        private System.Windows.Forms.TextBox tbtipo_documento_nc;
         private System.Windows.Forms.TextBox tbnum_documento_nc;
         private System.Windows.Forms.TextBox tb_direccion_nc;
         private System.Windows.Forms.TextBox tb_telefono_nc;
         private System.Windows.Forms.TextBox tb_correo_nc;
         private System.Windows.Forms.ToolStripMenuItem consultaClienteToolStripMenuItem;
-        private System.Windows.Forms.Panel MainMenuPanel;
+        private System.Windows.Forms.Panel MantenimientoClientePanel;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
