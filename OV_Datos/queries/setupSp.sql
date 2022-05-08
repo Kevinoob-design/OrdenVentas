@@ -74,6 +74,15 @@ insert into DETALLE_VENTA
 values(@IDVENTA, @IDARTICULO, @PRECIO, @DESCUENTO)
 go
 
+create proc consultarUsuario
+
+	@USUARIO VARCHAR(100),
+	@PASSWORD VARCHAR(25)
+
+as
+	select * from USUARIO where USUARIO = @USUARIO and PASSWORD = CONVERT(VARBINARY, @PASSWORD)
+go
+
 create proc consultarClientes
 
 	@ID INT = null

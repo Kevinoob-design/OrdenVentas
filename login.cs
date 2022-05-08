@@ -1,12 +1,8 @@
-﻿using System;
+﻿using OrdenVentas.shared;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using OV_Negocio;
 
 namespace OrdenVentas
 {
@@ -20,6 +16,27 @@ namespace OrdenVentas
         private void bsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void bacceso_Click(object sender, EventArgs e)
+        {
+
+            Dictionary<string, string> usuarioParams = Utils.GetCollectionKeyValueFromControlsTags(LoginPanel);
+
+            UsuarioDto usuarioDto = new UsuarioDto();
+
+            bool isUsuarioLogedIn = usuarioDto.login(usuarioParams);
+
+            if (isUsuarioLogedIn)
+            {
+                MainMenu nMainMenu = new MainMenu();
+                nMainMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contrasena incorrecto");
+            }
         }
     }
 }

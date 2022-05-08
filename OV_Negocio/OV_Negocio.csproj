@@ -42,6 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OV_Datos\OV_Datos.csproj">
+      <Project>{01bf4817-8bdb-4e70-be42-4574db1959bc}</Project>
+      <Name>OV_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OV_Entidad\OV_Entidad.csproj">
+      <Project>{d0c5533f-a533-4839-8a1a-ae2289742726}</Project>
+      <Name>OV_Entidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

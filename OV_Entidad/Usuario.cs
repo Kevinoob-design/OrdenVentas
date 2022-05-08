@@ -9,6 +9,5 @@
         public string DIRECCION { get; set; }
         public string TELEFONO { get; set; }
         public string EMAIL { get; set; }
-        public string PASSWORD { get; set; }
     }
 }
