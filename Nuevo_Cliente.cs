@@ -3,12 +3,6 @@ using OV_Entidad;
 using OV_Negocio;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrdenVentas
@@ -74,9 +68,7 @@ namespace OrdenVentas
 
                 ClienteDto clienteDto = new ClienteDto();
 
-                DataSet ds = clienteDto.consultar(clienteParams);
-
-                ClientesDgv.DataSource = ds;
+                ClientesDgv.DataSource = clienteDto.consultar(clienteParams);
 
                 string tableConsultarClientes = tables.CLIENTES.ToString();
 
