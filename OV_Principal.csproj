@@ -59,11 +59,11 @@
     <Compile Include="Detalle_Ventas.Designer.cs">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -71,11 +71,11 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="nueva_categoria.cs">
+    <Compile Include="Nueva_Categoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nueva_categoria.Designer.cs">
-      <DependentUpon>nueva_categoria.cs</DependentUpon>
+    <Compile Include="Nueva_Categoria.Designer.cs">
+      <DependentUpon>Nueva_Categoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Nueva_Venta.cs">
       <SubType>Form</SubType>
@@ -83,11 +83,11 @@
     <Compile Include="Nueva_Venta.Designer.cs">
       <DependentUpon>Nueva_Venta.cs</DependentUpon>
     </Compile>
-    <Compile Include="nuevo_articulo.cs">
+    <Compile Include="Nuevo_Articulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nuevo_articulo.Designer.cs">
-      <DependentUpon>nuevo_articulo.cs</DependentUpon>
+    <Compile Include="Nuevo_Articulo.Designer.cs">
+      <DependentUpon>Nuevo_Articulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Nuevo_Cliente.cs">
       <SubType>Form</SubType>
@@ -104,20 +104,20 @@
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nueva_categoria.resx">
-      <DependentUpon>nueva_categoria.cs</DependentUpon>
+    <EmbeddedResource Include="Nueva_Categoria.resx">
+      <DependentUpon>Nueva_Categoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nueva_Venta.resx">
       <DependentUpon>Nueva_Venta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nuevo_articulo.resx">
-      <DependentUpon>nuevo_articulo.cs</DependentUpon>
+    <EmbeddedResource Include="Nuevo_Articulo.resx">
+      <DependentUpon>Nuevo_Articulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Cliente.resx">
       <DependentUpon>Nuevo_Cliente.cs</DependentUpon>
