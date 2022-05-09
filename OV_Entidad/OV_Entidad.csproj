@@ -42,9 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetalleVenta.cs" />
-    <Compile Include="tables.cs" />
-    <Compile Include="storedProcedures.cs" />
-    <Compile Include="User_for_test.cs" />
+    <Compile Include="Tables.cs" />
+    <Compile Include="StoredProcedures.cs" />
     <Compile Include="Venta.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Cliente.cs" />
