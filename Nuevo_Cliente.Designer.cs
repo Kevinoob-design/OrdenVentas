@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo_Cliente));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,14 +61,15 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverAlMenuPrincipalToolStripMenuItem,
             this.consultaClienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(825, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1238, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,7 +77,7 @@
             // 
             this.volverAlMenuPrincipalToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.volverAlMenuPrincipalToolStripMenuItem.Name = "volverAlMenuPrincipalToolStripMenuItem";
-            this.volverAlMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.volverAlMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(216, 29);
             this.volverAlMenuPrincipalToolStripMenuItem.Text = "Volver al Menu Principal";
             this.volverAlMenuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.volverAlMenuPrincipalToolStripMenuItem_Click);
             // 
@@ -83,7 +85,7 @@
             // 
             this.consultaClienteToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.consultaClienteToolStripMenuItem.Name = "consultaClienteToolStripMenuItem";
-            this.consultaClienteToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.consultaClienteToolStripMenuItem.Size = new System.Drawing.Size(155, 29);
             this.consultaClienteToolStripMenuItem.Text = "Consulta Cliente";
             this.consultaClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaClienteToolStripMenuItem_Click);
             // 
@@ -97,23 +99,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientesDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.ClientesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientesDgv.Location = new System.Drawing.Point(11, 254);
-            this.ClientesDgv.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientesDgv.Location = new System.Drawing.Point(0, 391);
             this.ClientesDgv.Name = "ClientesDgv";
             this.ClientesDgv.ReadOnly = true;
             this.ClientesDgv.RowHeadersWidth = 62;
             this.ClientesDgv.RowTemplate.Height = 33;
             this.ClientesDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ClientesDgv.Size = new System.Drawing.Size(803, 207);
+            this.ClientesDgv.Size = new System.Drawing.Size(1238, 334);
             this.ClientesDgv.TabIndex = 1;
             this.ClientesDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientesDgv_CellClick);
             // 
             // AgregarCliente
             // 
-            this.AgregarCliente.Location = new System.Drawing.Point(527, 12);
-            this.AgregarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarCliente.Location = new System.Drawing.Point(1043, 60);
             this.AgregarCliente.Name = "AgregarCliente";
-            this.AgregarCliente.Size = new System.Drawing.Size(100, 25);
+            this.AgregarCliente.Size = new System.Drawing.Size(150, 71);
             this.AgregarCliente.TabIndex = 2;
             this.AgregarCliente.Text = "Agregar";
             this.AgregarCliente.UseVisualStyleBackColor = true;
@@ -121,10 +121,9 @@
             // 
             // ActualizarCliente
             // 
-            this.ActualizarCliente.Location = new System.Drawing.Point(527, 52);
-            this.ActualizarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.ActualizarCliente.Location = new System.Drawing.Point(1043, 155);
             this.ActualizarCliente.Name = "ActualizarCliente";
-            this.ActualizarCliente.Size = new System.Drawing.Size(100, 25);
+            this.ActualizarCliente.Size = new System.Drawing.Size(150, 72);
             this.ActualizarCliente.TabIndex = 3;
             this.ActualizarCliente.Text = "Actualizar";
             this.ActualizarCliente.UseVisualStyleBackColor = true;
@@ -132,10 +131,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(527, 96);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(1043, 261);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 25);
+            this.button3.Size = new System.Drawing.Size(150, 72);
             this.button3.TabIndex = 4;
             this.button3.Text = "Nueva Entrada";
             this.button3.UseVisualStyleBackColor = true;
@@ -143,125 +141,112 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Codigo Cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(16, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nombre Completo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 87);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(16, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo de Documento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 137);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(16, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Direccion";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 159);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(16, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Telefono";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 184);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(16, 283);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Correo";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(16, 172);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 13);
+            this.label7.Size = new System.Drawing.Size(129, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "Num Documento";
             // 
             // tbcodigo_nc
             // 
-            this.tbcodigo_nc.Location = new System.Drawing.Point(120, 9);
-            this.tbcodigo_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbcodigo_nc.Location = new System.Drawing.Point(180, 14);
             this.tbcodigo_nc.Name = "tbcodigo_nc";
             this.tbcodigo_nc.ReadOnly = true;
-            this.tbcodigo_nc.Size = new System.Drawing.Size(233, 20);
+            this.tbcodigo_nc.Size = new System.Drawing.Size(348, 26);
             this.tbcodigo_nc.TabIndex = 12;
             this.tbcodigo_nc.Tag = "IDCLIENTE";
             // 
             // tbnombre_nc
             // 
-            this.tbnombre_nc.Location = new System.Drawing.Point(120, 60);
-            this.tbnombre_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbnombre_nc.Location = new System.Drawing.Point(180, 92);
             this.tbnombre_nc.Name = "tbnombre_nc";
-            this.tbnombre_nc.Size = new System.Drawing.Size(233, 20);
+            this.tbnombre_nc.Size = new System.Drawing.Size(348, 26);
             this.tbnombre_nc.TabIndex = 13;
             this.tbnombre_nc.Tag = "NOMBRE";
             // 
             // tbnum_documento_nc
             // 
-            this.tbnum_documento_nc.Location = new System.Drawing.Point(120, 111);
-            this.tbnum_documento_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tbnum_documento_nc.Location = new System.Drawing.Point(180, 171);
             this.tbnum_documento_nc.Name = "tbnum_documento_nc";
-            this.tbnum_documento_nc.Size = new System.Drawing.Size(233, 20);
+            this.tbnum_documento_nc.Size = new System.Drawing.Size(348, 26);
             this.tbnum_documento_nc.TabIndex = 15;
             this.tbnum_documento_nc.Tag = "NUM_DOCUMENTO";
             // 
             // tb_direccion_nc
             // 
-            this.tb_direccion_nc.Location = new System.Drawing.Point(120, 135);
-            this.tb_direccion_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_direccion_nc.Location = new System.Drawing.Point(180, 208);
             this.tb_direccion_nc.Name = "tb_direccion_nc";
-            this.tb_direccion_nc.Size = new System.Drawing.Size(233, 20);
+            this.tb_direccion_nc.Size = new System.Drawing.Size(348, 26);
             this.tb_direccion_nc.TabIndex = 16;
             this.tb_direccion_nc.Tag = "DIRECCION";
             // 
             // tb_telefono_nc
             // 
-            this.tb_telefono_nc.Location = new System.Drawing.Point(120, 159);
-            this.tb_telefono_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_telefono_nc.Location = new System.Drawing.Point(180, 245);
             this.tb_telefono_nc.Name = "tb_telefono_nc";
-            this.tb_telefono_nc.Size = new System.Drawing.Size(233, 20);
+            this.tb_telefono_nc.Size = new System.Drawing.Size(348, 26);
             this.tb_telefono_nc.TabIndex = 17;
             this.tb_telefono_nc.Tag = "TELEFONO";
             // 
             // tb_correo_nc
             // 
-            this.tb_correo_nc.Location = new System.Drawing.Point(120, 183);
-            this.tb_correo_nc.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_correo_nc.Location = new System.Drawing.Point(180, 282);
             this.tb_correo_nc.Name = "tb_correo_nc";
-            this.tb_correo_nc.Size = new System.Drawing.Size(233, 20);
+            this.tb_correo_nc.Size = new System.Drawing.Size(348, 26);
             this.tb_correo_nc.TabIndex = 18;
             this.tb_correo_nc.Tag = "EMAIL";
             // 
@@ -272,11 +257,8 @@
             this.MantenimientoClientePanel.Controls.Add(this.comboBox1);
             this.MantenimientoClientePanel.Controls.Add(this.label1);
             this.MantenimientoClientePanel.Controls.Add(this.tb_correo_nc);
-            this.MantenimientoClientePanel.Controls.Add(this.AgregarCliente);
             this.MantenimientoClientePanel.Controls.Add(this.tb_telefono_nc);
-            this.MantenimientoClientePanel.Controls.Add(this.ActualizarCliente);
             this.MantenimientoClientePanel.Controls.Add(this.tb_direccion_nc);
-            this.MantenimientoClientePanel.Controls.Add(this.button3);
             this.MantenimientoClientePanel.Controls.Add(this.tbnum_documento_nc);
             this.MantenimientoClientePanel.Controls.Add(this.label2);
             this.MantenimientoClientePanel.Controls.Add(this.label3);
@@ -286,9 +268,10 @@
             this.MantenimientoClientePanel.Controls.Add(this.label5);
             this.MantenimientoClientePanel.Controls.Add(this.label7);
             this.MantenimientoClientePanel.Controls.Add(this.label6);
-            this.MantenimientoClientePanel.Location = new System.Drawing.Point(0, 27);
+            this.MantenimientoClientePanel.Location = new System.Drawing.Point(13, 38);
+            this.MantenimientoClientePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MantenimientoClientePanel.Name = "MantenimientoClientePanel";
-            this.MantenimientoClientePanel.Size = new System.Drawing.Size(633, 222);
+            this.MantenimientoClientePanel.Size = new System.Drawing.Size(937, 345);
             this.MantenimientoClientePanel.TabIndex = 19;
             // 
             // comboBox2
@@ -297,19 +280,19 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Cedula",
             "Pasaporte"});
-            this.comboBox2.Location = new System.Drawing.Point(120, 85);
+            this.comboBox2.Location = new System.Drawing.Point(180, 131);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(233, 21);
+            this.comboBox2.Size = new System.Drawing.Size(348, 28);
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Tag = "TIPO_DOCUMENTO";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 38);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(16, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(92, 20);
             this.label8.TabIndex = 20;
             this.label8.Text = "Tipo Cliente";
             // 
@@ -319,25 +302,29 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Cliente",
             "Proveedor"});
-            this.comboBox1.Location = new System.Drawing.Point(120, 34);
+            this.comboBox1.Location = new System.Drawing.Point(180, 52);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 21);
+            this.comboBox1.Size = new System.Drawing.Size(348, 28);
             this.comboBox1.TabIndex = 19;
             this.comboBox1.Tag = "TIPO_CLIENTE";
             // 
             // Nuevo_Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 469);
+            this.ClientSize = new System.Drawing.Size(1238, 722);
             this.Controls.Add(this.MantenimientoClientePanel);
             this.Controls.Add(this.ClientesDgv);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ActualizarCliente);
+            this.Controls.Add(this.AgregarCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Nuevo_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo_Cliente";
+            this.Text = "Choreto App";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesDgv)).EndInit();

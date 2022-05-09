@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_Cliente));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,11 +120,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCC.Location = new System.Drawing.Point(12, 206);
+            this.dataGridViewCC.Location = new System.Drawing.Point(12, 219);
             this.dataGridViewCC.Name = "dataGridViewCC";
             this.dataGridViewCC.RowHeadersWidth = 62;
             this.dataGridViewCC.RowTemplate.Height = 33;
-            this.dataGridViewCC.Size = new System.Drawing.Size(963, 274);
+            this.dataGridViewCC.Size = new System.Drawing.Size(963, 261);
             this.dataGridViewCC.TabIndex = 6;
             // 
             // label3
@@ -182,9 +183,10 @@
             this.Controls.Add(this.dataGridViewCC);
             this.Controls.Add(this.ConsultaClientePanel);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Consulta_Cliente";
-            this.Text = "Consulta_Cliente";
+            this.Text = "Choreto App";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCC)).EndInit();

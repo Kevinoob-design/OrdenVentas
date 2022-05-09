@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nueva_Categoria));
             this.dataGridView_nctg = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,7 +198,7 @@
             this.bnueva_entrada_nctg.Text = "Nueva Entrada";
             this.bnueva_entrada_nctg.UseVisualStyleBackColor = true;
             // 
-            // nueva_categoria
+            // Nueva_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,9 +219,10 @@
             this.Controls.Add(this.comboBox_nctg);
             this.Controls.Add(this.dataGridView_nctg);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "nueva_categoria";
-            this.Text = "nueva_categoria";
+            this.Name = "Nueva_Categoria";
+            this.Text = "Choreto App";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nctg)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
