@@ -24,9 +24,9 @@ namespace OV_Datos
 
         public static List<T> LoadTable<T>(string tableName, string fields = "*", string where = "") where T : new()
         {
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT {fields} FROM {tableName} {where}";
+            string commandText = $"SELECT {fields} FROM {tableName} {where}";
+
+            SqlCommand cmd = PrepareCmd(commandText, CommandType.Text);
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -35,7 +35,7 @@ namespace OV_Datos
 
         public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> spParams = null) where T : new()
         {
-            SqlCommand cmd = PrepareSp(spName, spParams);
+            SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -44,20 +44,20 @@ namespace OV_Datos
 
         public static void ExecSp(string spName, Dictionary<string, string> spParams = null)
         {
-            SqlCommand cmd = PrepareSp(spName, spParams);
+            SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
             cmd.ExecuteNonQuery();
         }
 
-        private static SqlCommand PrepareSp(string spName, Dictionary<string, string> spParams = null)
+        private static SqlCommand PrepareCmd(string commandText, CommandType commandType, Dictionary<string, string> parameters = null)
         {
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = spName;
+            cmd.CommandType = commandType;
+            cmd.CommandText = commandText;
 
-            if (spParams == null) return cmd;
+            if (parameters == null) return cmd;
 
-            foreach (var item in spParams)
+            foreach (var item in parameters)
             {
                 cmd.Parameters.AddWithValue($"@{item.Key}", item.Value);
             }
@@ -87,7 +87,7 @@ namespace OV_Datos
 
         public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
         {
-            SqlCommand cmd = PrepareSp(spName, spParams);
+            SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
