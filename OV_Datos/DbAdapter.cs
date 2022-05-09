@@ -31,27 +31,7 @@ namespace OV_Datos
 
             SqlDataReader dr = cmd.ExecuteReader();
 
-            List<T> listOfItems = new List<T>();
-
-            while (dr.Read())
-            {
-                T item = new T();
-                Type type = item.GetType();
-
-                for (int i = 0; i < dr.FieldCount; i++)
-                {
-                    object boxed = item;
-
-                    type.GetProperty(dr.GetName(i))?.SetValue(boxed, dr.GetValue(i));
-
-                    item = (T)boxed;
-                }
-
-                listOfItems.Add(item);
-            }
-            dr.Close();
-
-            return listOfItems;
+            return Read<T>(dr);
         }
 
         public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> spParams = null) where T : new()
@@ -60,22 +40,7 @@ namespace OV_Datos
 
             SqlDataReader dr = cmd.ExecuteReader();
 
-            List<T> listOfItems = new List<T>();
-
-            while (dr.Read())
-            {
-                T item = new T();
-
-                for (int i = 0; i < dr.FieldCount; i++)
-                {
-                    item = Utils.MapBoxedFromKeyValue(item, dr.GetName(i), dr.GetValue(i));
-                }
-
-                listOfItems.Add(item);
-            }
-            dr.Close();
-
-            return listOfItems;
+            return Read<T>(dr);
         }
 
         public static void ExecSp(string spName, Dictionary<string, string> spParams = null)
@@ -97,6 +62,26 @@ namespace OV_Datos
             }
 
             return cmd;
+        }
+
+        private static List<T> Read<T>(SqlDataReader dr) where T : new()
+        {
+            List<T> listOfItems = new List<T>();
+
+            while (dr.Read())
+            {
+                T item = new T();
+
+                for (int i = 0; i < dr.FieldCount; i++)
+                {
+                    item = Utils.MapBoxedFromKeyValue(item, dr.GetName(i), dr.GetValue(i));
+                }
+
+                listOfItems.Add(item);
+            }
+            dr.Close();
+
+            return listOfItems;
         }
 
         public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
