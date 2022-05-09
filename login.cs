@@ -1,8 +1,8 @@
-﻿using OrdenVentas.shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using OV_Negocio;
+using Libs;
 
 namespace OrdenVentas
 {

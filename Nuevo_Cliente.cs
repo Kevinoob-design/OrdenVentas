@@ -1,4 +1,4 @@
-﻿using OrdenVentas.shared;
+﻿using Libs;
 using OV_Entidad;
 using OV_Negocio;
 using System;
@@ -78,6 +78,23 @@ namespace OrdenVentas
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ClientesDgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView cell = (DataGridView)sender;
+
+            Cliente cliente = new Cliente();
+
+            foreach (DataGridViewCell item in cell.Rows[e.RowIndex].Cells)
+            {
+                string header = item.OwningColumn.HeaderText;
+                object value = item.Value;
+
+                cliente = Utils.MapBoxedFromKeyValue(cliente, header, value);
+            }
+
+            Utils.SetControlsChildWithValueFromCollection(cliente, MantenimientoClientePanel);
         }
     }
 }

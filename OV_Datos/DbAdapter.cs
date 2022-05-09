@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Libs;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -64,15 +65,10 @@ namespace OV_Datos
             while (dr.Read())
             {
                 T item = new T();
-                Type type = item.GetType();
 
                 for (int i = 0; i < dr.FieldCount; i++)
                 {
-                    object boxed = item;
-
-                    type.GetProperty(dr.GetName(i))?.SetValue(boxed, dr.GetValue(i));
-
-                    item = (T)boxed;
+                    item = Utils.MapBoxedFromKeyValue(item, dr.GetName(i), dr.GetValue(i));
                 }
 
                 listOfItems.Add(item);

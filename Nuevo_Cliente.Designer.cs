@@ -49,9 +49,9 @@
             this.tb_telefono_nc = new System.Windows.Forms.TextBox();
             this.tb_correo_nc = new System.Windows.Forms.TextBox();
             this.MantenimientoClientePanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesDgv)).BeginInit();
             this.MantenimientoClientePanel.SuspendLayout();
@@ -106,6 +106,7 @@
             this.ClientesDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ClientesDgv.Size = new System.Drawing.Size(803, 207);
             this.ClientesDgv.TabIndex = 1;
+            this.ClientesDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientesDgv_CellClick);
             // 
             // AgregarCliente
             // 
@@ -217,7 +218,7 @@
             this.tbcodigo_nc.ReadOnly = true;
             this.tbcodigo_nc.Size = new System.Drawing.Size(233, 20);
             this.tbcodigo_nc.TabIndex = 12;
-            this.tbcodigo_nc.Tag = "ID";
+            this.tbcodigo_nc.Tag = "IDCLIENTE";
             // 
             // tbnombre_nc
             // 
@@ -290,28 +291,6 @@
             this.MantenimientoClientePanel.Size = new System.Drawing.Size(633, 222);
             this.MantenimientoClientePanel.TabIndex = 19;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cliente",
-            "Proveedor"});
-            this.comboBox1.Location = new System.Drawing.Point(120, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 21);
-            this.comboBox1.TabIndex = 19;
-            this.comboBox1.Tag = "TIPO_CLIENTE";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 38);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Tipo Cliente";
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -323,6 +302,28 @@
             this.comboBox2.Size = new System.Drawing.Size(233, 21);
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Tag = "TIPO_DOCUMENTO";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 38);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Tipo Cliente";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cliente",
+            "Proveedor"});
+            this.comboBox1.Location = new System.Drawing.Point(120, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 21);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.Tag = "TIPO_CLIENTE";
             // 
             // Nuevo_Cliente
             // 

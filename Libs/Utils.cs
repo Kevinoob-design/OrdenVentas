@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace OrdenVentas.shared
+namespace Libs
 {
-    internal static class Utils
+    public static class Utils
     {
         public static Dictionary<string, string> GetCollectionKeyValueFromControlsTags(params Control[] controls)
         {
@@ -68,6 +68,17 @@ namespace OrdenVentas.shared
                     }
                 }
             }
+        }
+
+        public static T MapBoxedFromKeyValue<T>(T Source, string key, object value) where T : new()
+        {
+            Type type = typeof(T);
+
+            object boxed = Source;
+
+            type.GetProperty(key)?.SetValue(boxed, value);
+
+            return (T)boxed;
         }
     }
 }
