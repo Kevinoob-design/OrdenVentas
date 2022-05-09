@@ -1,6 +1,6 @@
 ﻿namespace OV_Entidad
 {
-    public enum storedProcedures
+    public enum StoredProcedures
     {
         consultarUsuario = 1,
         guardarCategoria = 2,

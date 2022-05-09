@@ -70,7 +70,7 @@ namespace OrdenVentas
 
                 ClientesDgv.DataSource = clienteDto.consultar(clienteParams);
 
-                string tableConsultarClientes = tables.CLIENTES.ToString();
+                string tableConsultarClientes = Tables.CLIENTES.ToString();
 
                 ClientesDgv.DataMember = tableConsultarClientes;
             }

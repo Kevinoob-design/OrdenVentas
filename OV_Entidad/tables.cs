@@ -1,6 +1,6 @@
 ﻿namespace OV_Entidad
 {
-    public enum tables
+    public enum Tables
     {
         CATEGORIA = 1,
         ARTICULO = 2,

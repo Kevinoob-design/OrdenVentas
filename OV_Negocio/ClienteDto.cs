@@ -10,8 +10,8 @@ namespace OV_Negocio
     {
         public DataSet consultar(Dictionary<string, string> clienteParams = null)
         {
-            string tableConsultarClientes = tables.CLIENTES.ToString();
-            string spNameConsultarClientes = storedProcedures.consultarClientes.ToString();
+            string tableConsultarClientes = Tables.CLIENTES.ToString();
+            string spNameConsultarClientes = StoredProcedures.consultarClientes.ToString();
 
             return DbAdapter.LoadBackToDataSetWithSp(tableConsultarClientes, spNameConsultarClientes, clienteParams);
         }
@@ -20,7 +20,7 @@ namespace OV_Negocio
         {
             if (clienteParams.ContainsKey("ID")) clienteParams.Remove("ID");
 
-            string spNameConsultarClientes = storedProcedures.guardarCliente.ToString();
+            string spNameConsultarClientes = StoredProcedures.guardarCliente.ToString();
 
             DbAdapter.ExecSp(spNameConsultarClientes, clienteParams);
         }
@@ -29,7 +29,7 @@ namespace OV_Negocio
         {
             if (!clienteParams.ContainsKey("ID")) throw new Exception("El ID del cliente es requerido");
 
-            string spNameConsultarClientes = storedProcedures.actualizarCliente.ToString();
+            string spNameConsultarClientes = StoredProcedures.actualizarCliente.ToString();
 
             DbAdapter.ExecSp(spNameConsultarClientes, clienteParams);
         }
