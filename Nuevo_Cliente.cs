@@ -64,11 +64,9 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> clienteParams = new Dictionary<string, string>();
-
                 ClienteDto clienteDto = new ClienteDto();
 
-                ClientesDgv.DataSource = clienteDto.consultar(clienteParams);
+                ClientesDgv.DataSource = clienteDto.consultar();
 
                 string tableConsultarClientes = Tables.CLIENTES.ToString();
 

@@ -56,6 +56,8 @@ namespace OV_Datos
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = spName;
 
+            if (spParams == null) return cmd;
+
             foreach (var item in spParams)
             {
                 cmd.Parameters.AddWithValue($"@{item.Key}", item.Value);
