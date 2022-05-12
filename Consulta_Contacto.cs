@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrdenVentas
 {
-    public partial class Consulta_Cliente : Form
+    public partial class Consulta_Contacto : Form
     {
-        public Consulta_Cliente()
+        public Consulta_Contacto()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace OrdenVentas
 
         private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nuevo_Cliente nVolver_nc = new Nuevo_Cliente();
+            Nuevo_Contacto nVolver_nc = new Nuevo_Contacto();
             nVolver_nc.Show();
             this.Hide();
         }

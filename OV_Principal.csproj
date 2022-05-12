@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consulta_Cliente.cs">
+    <Compile Include="Consulta_Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta_Cliente.Designer.cs">
-      <DependentUpon>Consulta_Cliente.cs</DependentUpon>
+    <Compile Include="Consulta_Contacto.Designer.cs">
+      <DependentUpon>Consulta_Contacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Detalle_Ventas.cs">
       <SubType>Form</SubType>
@@ -89,16 +89,16 @@
     <Compile Include="Nuevo_Articulo.Designer.cs">
       <DependentUpon>Nuevo_Articulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nuevo_Cliente.cs">
+    <Compile Include="Nuevo_Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nuevo_Cliente.Designer.cs">
-      <DependentUpon>Nuevo_Cliente.cs</DependentUpon>
+    <Compile Include="Nuevo_Contacto.Designer.cs">
+      <DependentUpon>Nuevo_Contacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Consulta_Cliente.resx">
-      <DependentUpon>Consulta_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Consulta_Contacto.resx">
+      <DependentUpon>Consulta_Contacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="Nuevo_Articulo.resx">
       <DependentUpon>Nuevo_Articulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo_Cliente.resx">
-      <DependentUpon>Nuevo_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Nuevo_Contacto.resx">
+      <DependentUpon>Nuevo_Contacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

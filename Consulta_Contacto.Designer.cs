@@ -1,6 +1,6 @@
 ﻿namespace OrdenVentas
 {
-    partial class Consulta_Cliente
+    partial class Consulta_Contacto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_Contacto));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +42,8 @@
             this.tbnombre_cliente_cc = new System.Windows.Forms.TextBox();
             this.tbnum_documento_cc = new System.Windows.Forms.TextBox();
             this.ConsultaClientePanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb_consulta_tipo_cc = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCC)).BeginInit();
             this.ConsultaClientePanel.SuspendLayout();
@@ -74,8 +76,8 @@
             // 
             this.nuevoClienteToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(138, 29);
-            this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(157, 29);
+            this.nuevoClienteToolStripMenuItem.Text = "Nuevo Contacto";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // bConsultar_cc
@@ -119,6 +121,7 @@
             this.dataGridViewCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCC.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dataGridViewCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCC.Location = new System.Drawing.Point(12, 219);
             this.dataGridViewCC.Name = "dataGridViewCC";
@@ -161,6 +164,8 @@
             // 
             this.ConsultaClientePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsultaClientePanel.Controls.Add(this.cb_consulta_tipo_cc);
+            this.ConsultaClientePanel.Controls.Add(this.label4);
             this.ConsultaClientePanel.Controls.Add(this.tbnum_documento_cc);
             this.ConsultaClientePanel.Controls.Add(this.bConsultar_cc);
             this.ConsultaClientePanel.Controls.Add(this.tbnombre_cliente_cc);
@@ -174,6 +179,23 @@
             this.ConsultaClientePanel.Name = "ConsultaClientePanel";
             this.ConsultaClientePanel.Size = new System.Drawing.Size(987, 142);
             this.ConsultaClientePanel.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(403, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Consulta por tipo";
+            // 
+            // cb_consulta_tipo_cc
+            // 
+            this.cb_consulta_tipo_cc.FormattingEnabled = true;
+            this.cb_consulta_tipo_cc.Location = new System.Drawing.Point(407, 50);
+            this.cb_consulta_tipo_cc.Name = "cb_consulta_tipo_cc";
+            this.cb_consulta_tipo_cc.Size = new System.Drawing.Size(171, 28);
+            this.cb_consulta_tipo_cc.TabIndex = 12;
             // 
             // Consulta_Cliente
             // 
@@ -212,5 +234,7 @@
         private System.Windows.Forms.TextBox tbnum_documento_cc;
         private System.Windows.Forms.ToolStripMenuItem nuevoClienteToolStripMenuItem;
         private System.Windows.Forms.Panel ConsultaClientePanel;
+        private System.Windows.Forms.ComboBox cb_consulta_tipo_cc;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace OrdenVentas
 {
-    partial class Nuevo_Cliente
+    partial class Nuevo_Contacto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo_Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo_Contacto));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,8 +68,7 @@
             this.consultaClienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1238, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1116, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,8 +84,8 @@
             // 
             this.consultaClienteToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.consultaClienteToolStripMenuItem.Name = "consultaClienteToolStripMenuItem";
-            this.consultaClienteToolStripMenuItem.Size = new System.Drawing.Size(155, 29);
-            this.consultaClienteToolStripMenuItem.Text = "Consulta Cliente";
+            this.consultaClienteToolStripMenuItem.Size = new System.Drawing.Size(174, 29);
+            this.consultaClienteToolStripMenuItem.Text = "Consulta Contacto";
             this.consultaClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaClienteToolStripMenuItem_Click);
             // 
             // ClientesDgv
@@ -98,22 +97,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientesDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.ClientesDgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.ClientesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientesDgv.Location = new System.Drawing.Point(0, 391);
+            this.ClientesDgv.Location = new System.Drawing.Point(12, 391);
             this.ClientesDgv.Name = "ClientesDgv";
             this.ClientesDgv.ReadOnly = true;
             this.ClientesDgv.RowHeadersWidth = 62;
             this.ClientesDgv.RowTemplate.Height = 33;
             this.ClientesDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ClientesDgv.Size = new System.Drawing.Size(1238, 334);
+            this.ClientesDgv.Size = new System.Drawing.Size(1092, 334);
             this.ClientesDgv.TabIndex = 1;
             this.ClientesDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientesDgv_CellClick);
             // 
             // AgregarCliente
             // 
-            this.AgregarCliente.Location = new System.Drawing.Point(1043, 60);
+            this.AgregarCliente.Location = new System.Drawing.Point(573, 257);
             this.AgregarCliente.Name = "AgregarCliente";
-            this.AgregarCliente.Size = new System.Drawing.Size(150, 71);
+            this.AgregarCliente.Size = new System.Drawing.Size(150, 72);
             this.AgregarCliente.TabIndex = 2;
             this.AgregarCliente.Text = "Agregar";
             this.AgregarCliente.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             // 
             // ActualizarCliente
             // 
-            this.ActualizarCliente.Location = new System.Drawing.Point(1043, 155);
+            this.ActualizarCliente.Location = new System.Drawing.Point(751, 257);
             this.ActualizarCliente.Name = "ActualizarCliente";
             this.ActualizarCliente.Size = new System.Drawing.Size(150, 72);
             this.ActualizarCliente.TabIndex = 3;
@@ -131,7 +131,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1043, 261);
+            this.button3.Location = new System.Drawing.Point(925, 257);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 72);
             this.button3.TabIndex = 4;
@@ -143,9 +143,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Codigo Cliente";
+            this.label1.Text = "Codigo Contacto";
             // 
             // label2
             // 
@@ -255,7 +255,10 @@
             this.MantenimientoClientePanel.Controls.Add(this.comboBox2);
             this.MantenimientoClientePanel.Controls.Add(this.label8);
             this.MantenimientoClientePanel.Controls.Add(this.comboBox1);
+            this.MantenimientoClientePanel.Controls.Add(this.button3);
+            this.MantenimientoClientePanel.Controls.Add(this.ActualizarCliente);
             this.MantenimientoClientePanel.Controls.Add(this.label1);
+            this.MantenimientoClientePanel.Controls.Add(this.AgregarCliente);
             this.MantenimientoClientePanel.Controls.Add(this.tb_correo_nc);
             this.MantenimientoClientePanel.Controls.Add(this.tb_telefono_nc);
             this.MantenimientoClientePanel.Controls.Add(this.tb_direccion_nc);
@@ -268,10 +271,10 @@
             this.MantenimientoClientePanel.Controls.Add(this.label5);
             this.MantenimientoClientePanel.Controls.Add(this.label7);
             this.MantenimientoClientePanel.Controls.Add(this.label6);
-            this.MantenimientoClientePanel.Location = new System.Drawing.Point(13, 38);
+            this.MantenimientoClientePanel.Location = new System.Drawing.Point(0, 38);
             this.MantenimientoClientePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MantenimientoClientePanel.Name = "MantenimientoClientePanel";
-            this.MantenimientoClientePanel.Size = new System.Drawing.Size(937, 345);
+            this.MantenimientoClientePanel.Size = new System.Drawing.Size(1103, 345);
             this.MantenimientoClientePanel.TabIndex = 19;
             // 
             // comboBox2
@@ -292,9 +295,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(16, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 20);
+            this.label8.Size = new System.Drawing.Size(108, 20);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Tipo Cliente";
+            this.label8.Text = "Tipo Contacto";
             // 
             // comboBox1
             // 
@@ -313,13 +316,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 722);
+            this.ClientSize = new System.Drawing.Size(1116, 722);
             this.Controls.Add(this.MantenimientoClientePanel);
             this.Controls.Add(this.ClientesDgv);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.ActualizarCliente);
-            this.Controls.Add(this.AgregarCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Nuevo_Cliente";

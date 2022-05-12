@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace OrdenVentas
 {
-    public partial class Nuevo_Cliente : Form
+    public partial class Nuevo_Contacto : Form
     {
-        public Nuevo_Cliente(int? ID = 0)
+        public Nuevo_Contacto(int? ID = 0)
         {
             if (ID > 0) tbcodigo_nc.Text = ID.ToString();
 
@@ -26,7 +26,7 @@ namespace OrdenVentas
 
         private void consultaClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Consulta_Cliente nVolver_CC = new Consulta_Cliente();
+            Consulta_Contacto nVolver_CC = new Consulta_Contacto();
             nVolver_CC.Show();
             this.Hide();
         }

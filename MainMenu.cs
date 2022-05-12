@@ -22,14 +22,14 @@ namespace OrdenVentas
 
         private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Consulta_Cliente nConsultaC = new Consulta_Cliente();
+            Consulta_Contacto nConsultaC = new Consulta_Contacto();
             nConsultaC.Show();
             this.Hide();
         }
 
         private void nuevoClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Nuevo_Cliente nCliente = new Nuevo_Cliente();
+            Nuevo_Contacto nCliente = new Nuevo_Contacto();
             nCliente.Show();
             this.Hide();
         }

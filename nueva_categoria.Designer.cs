@@ -52,6 +52,7 @@
             // 
             // dataGridView_nctg
             // 
+            this.dataGridView_nctg.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dataGridView_nctg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_nctg.Location = new System.Drawing.Point(12, 321);
             this.dataGridView_nctg.Name = "dataGridView_nctg";
