@@ -30,5 +30,10 @@ namespace OrdenVentas
             nVolver_dvent.Show();
             this.Hide();
         }
+
+        private void Nueva_Venta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
