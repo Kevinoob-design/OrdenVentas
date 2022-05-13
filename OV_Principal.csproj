@@ -59,6 +59,12 @@
     <Compile Include="Detalle_Ventas.Designer.cs">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas_Ventas.Designer.cs">
+      <DependentUpon>Estadisticas_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas_Ventas.resx">
+      <DependentUpon>Estadisticas_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
