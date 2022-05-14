@@ -40,7 +40,7 @@ go
 
 create proc actualizarCliente
 	
-	@ID INT,
+	@IDCLIENTE INT,
 	@NOMBRE VARCHAR(100),
 	@TIPO_CLIENTE VARCHAR(20),
 	@TIPO_DOCUMENTO VARCHAR(20),
@@ -59,7 +59,7 @@ set
 	TELEFONO = @TELEFONO,
 	EMAIL = @EMAIL
 
-	where IDCLIENTE = @ID
+	where IDCLIENTE = @IDCLIENTE
 go
 
 create proc guardarRol

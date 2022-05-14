@@ -37,7 +37,7 @@ namespace OrdenVentas
 
             ClienteDto clienteDto = new ClienteDto();
 
-            clienteDto.guardar(clienteParams);
+            clienteDto.Guardar(StoredProcedures.guardarCliente, clienteParams, "IDCLIENTE");
 
             LoadClientesDgv();
         }
@@ -50,7 +50,9 @@ namespace OrdenVentas
 
                 ClienteDto clienteDto = new ClienteDto();
 
-                clienteDto.actualizar(clienteParams);
+                clienteDto.Actualizar(StoredProcedures.actualizarCliente, clienteParams, "IDCLIENTE");
+
+                MessageBox.Show($"Contacto {clienteParams["IDCLIENTE"]} actualizado correctamente");
 
                 LoadClientesDgv();
             }
@@ -66,7 +68,7 @@ namespace OrdenVentas
             {
                 ClienteDto clienteDto = new ClienteDto();
 
-                ClientesDgv.DataSource = clienteDto.consultar();
+                ClientesDgv.DataSource = clienteDto.Consultar(StoredProcedures.consultarClientes, Tables.CLIENTES);
 
                 string tableConsultarClientes = Tables.CLIENTES.ToString();
 
@@ -91,6 +93,13 @@ namespace OrdenVentas
 
                 cliente = Utils.MapBoxedFromKeyValue(cliente, header, value);
             }
+
+            Utils.SetControlsChildWithValueFromCollection(cliente, MantenimientoClientePanel);
+        }
+
+        private void NuevaEntrada_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
 
             Utils.SetControlsChildWithValueFromCollection(cliente, MantenimientoClientePanel);
         }

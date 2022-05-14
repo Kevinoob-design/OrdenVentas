@@ -55,7 +55,7 @@ namespace Libs
                 if (hasTagAndIsNotEmpty)
                 {
                     Type type = typeof(T);
-                    control.Text = type.GetProperty(tag)?.GetValue(collection).ToString();
+                    control.Text = type.GetProperty(tag)?.GetValue(collection)?.ToString();
                 }
 
                 IEnumerable<Control> childControls = control.Controls.OfType<Control>();
