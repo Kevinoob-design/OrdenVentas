@@ -6,7 +6,7 @@
         public int IDCATEGORIA { get; set; }
         public string CODIGO { get; set; }
         public string NOMBRE { get; set; }
-        public float PRECIO_VENTA { get; set; }
+        public double PRECIO_VENTA { get; set; }
         public int STOCK { get; set; }
         public string DESCRIPCION { get; set; }
         public bool ESTADO { get; set; }

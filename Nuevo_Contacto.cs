@@ -68,7 +68,7 @@ namespace OrdenVentas
             {
                 ClienteDto clienteDto = new ClienteDto();
 
-                ClientesDgv.DataSource = clienteDto.Consultar(StoredProcedures.consultarClientes, Tables.CLIENTES);
+                ClientesDgv.DataSource = clienteDto.ConsultarToDs(StoredProcedures.consultarClientes, Tables.CLIENTES);
 
                 string tableConsultarClientes = Tables.CLIENTES.ToString();
 

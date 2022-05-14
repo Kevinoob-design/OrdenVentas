@@ -13,6 +13,8 @@
         consultarVentas = 9,
         actualizarCliente = 10,
         consultarCategoria = 11,
-        actualizarCategoria = 12
+        actualizarCategoria = 12,
+        consultarArticulo = 13,
+        actualizarArticulo = 14
     }
 }

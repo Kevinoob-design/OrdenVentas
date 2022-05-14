@@ -73,7 +73,7 @@ namespace OrdenVentas
             {
                 CategoriaDto dto = new CategoriaDto();
 
-                dataGridView_nctg.DataSource = dto.Consultar(StoredProcedures.consultarCategoria, Tables.CATEGORIA);
+                dataGridView_nctg.DataSource = dto.ConsultarToDs(StoredProcedures.consultarCategoria, Tables.CATEGORIA);
 
                 dataGridView_nctg.DataMember = Tables.CATEGORIA.ToString();
             }

@@ -8,7 +8,13 @@ namespace OV_Negocio
 {
     public class BaseDto
     {
-        public DataSet Consultar(StoredProcedures sp, Tables table, Dictionary<string, string> paramsDto = null)
+        public List<T> Consultar<T>(StoredProcedures sp, Dictionary<string, string> paramsDto = null) where T : new()
+        {
+            string spExec = sp.ToString();
+
+            return DbAdapter.LoadDataFromSp<T>(spExec, paramsDto);
+        }
+        public DataSet ConsultarToDs(StoredProcedures sp, Tables table, Dictionary<string, string> paramsDto = null)
         {
             string tableConsult = table.ToString();
             string spExec = sp.ToString();

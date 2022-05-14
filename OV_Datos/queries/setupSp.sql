@@ -19,10 +19,10 @@ create proc guardarArticulo
 	@PRECIO_VENTA FLOAT,
 	@STOCK INT,
 	@DESCRIPCION VARCHAR,
-	@ESTADO BIT
+	@ESTADO BIT = 1
 as
 insert into ARTICULO
-values(@IDCATEGORIA, @CODIGO, @NOMBRE, @PRECIO_VENTA, @STOCK, @DESCRIPCION, 1)
+values(@IDCATEGORIA, @CODIGO, @NOMBRE, @PRECIO_VENTA, @STOCK, @DESCRIPCION, @ESTADO)
 go
 
 create proc guardarCliente
@@ -152,4 +152,38 @@ as
 		select * from CATEGORIA where IDCATEGORIA = @IDCATEGORIA
 	else
 		select * from CATEGORIA
+go
+
+create proc consultarArticulo
+
+	@IDARTICULO INT = null
+as
+	if @IDARTICULO is not null
+		select * from ARTICULO where IDARTICULO = @IDARTICULO
+	else
+		select * from ARTICULO
+go
+
+create proc actualizarArticulo
+	
+	@IDARTICULO INT,
+	@IDCATEGORIA INT,
+	@CODIGO VARCHAR(50),
+	@NOMBRE VARCHAR(100),
+	@PRECIO_VENTA FLOAT,
+	@STOCK INT,
+	@DESCRIPCION VARCHAR,
+	@ESTADO BIT = 1
+as
+update ARTICULO
+set
+	IDCATEGORIA = @IDCATEGORIA,
+	CODIGO = @CODIGO,
+	NOMBRE = @NOMBRE,
+	PRECIO_VENTA = @PRECIO_VENTA,
+	STOCK = @STOCK,
+	DESCRIPCION = @DESCRIPCION,
+	ESTADO = @ESTADO
+
+	where IDARTICULO = @IDARTICULO
 go
