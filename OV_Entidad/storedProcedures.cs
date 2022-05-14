@@ -11,6 +11,8 @@
         guardarDetalleVenta = 7,
         consultarClientes = 8,
         consultarVentas = 9,
-        actualizarCliente = 10
+        actualizarCliente = 10,
+        consultarCategoria = 11,
+        actualizarCategoria = 12
     }
 }

@@ -4,10 +4,11 @@ go
 create proc guardarCategoria
 
 	@NOMBRE VARCHAR(50),
-	@DESCRIPCION VARCHAR(256)
+	@DESCRIPCION VARCHAR(256),
+	@ESTADO BIT = 1
 as
 insert into CATEGORIA
-values(@NOMBRE, @DESCRIPCION, 1)
+values(@NOMBRE, @DESCRIPCION, @ESTADO)
 go
 
 create proc guardarArticulo
@@ -60,6 +61,22 @@ set
 	EMAIL = @EMAIL
 
 	where IDCLIENTE = @IDCLIENTE
+go
+
+create proc actualizarCategoria
+	
+	@IDCATEGORIA INT,
+	@NOMBRE VARCHAR(50),
+	@DESCRIPCION VARCHAR(256),
+	@ESTADO BIT
+as
+update CATEGORIA
+set
+	NOMBRE = @NOMBRE,
+	DESCRIPCION = @DESCRIPCION,
+	ESTADO = @ESTADO
+
+	where IDCATEGORIA = @IDCATEGORIA
 go
 
 create proc guardarRol
@@ -125,4 +142,14 @@ as
 		select * from VENTA where IDVENTA = @ID
 	else
 		select * from VENTA
+go
+
+create proc consultarCategoria
+
+	@IDCATEGORIA INT = null
+as
+	if @IDCATEGORIA is not null
+		select * from CATEGORIA where IDCATEGORIA = @IDCATEGORIA
+	else
+		select * from CATEGORIA
 go

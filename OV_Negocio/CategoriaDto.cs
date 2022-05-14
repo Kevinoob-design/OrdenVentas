@@ -1,6 +1,6 @@
 ﻿namespace OV_Negocio
 {
-    public class ClienteDto : BaseDto
+    public class CategoriaDto : BaseDto
     {
 
     }

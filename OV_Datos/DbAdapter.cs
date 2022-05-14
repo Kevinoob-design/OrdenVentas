@@ -1,4 +1,5 @@
 ﻿using Libs;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -44,9 +45,16 @@ namespace OV_Datos
 
         public static void ExecSp(string spName, Dictionary<string, string> spParams = null)
         {
-            SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
+            try
+            {
+                SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
         }
 
         private static SqlCommand PrepareCmd(string commandText, CommandType commandType, Dictionary<string, string> parameters = null)

@@ -14,7 +14,7 @@ namespace OrdenVentas
             if (ID > 0) tbcodigo_nc.Text = ID.ToString();
 
             InitializeComponent();
-            LoadClientesDgv();
+            LoadDgv();
         }
 
         private void volverAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace OrdenVentas
 
             clienteDto.Guardar(StoredProcedures.guardarCliente, clienteParams, "IDCLIENTE");
 
-            LoadClientesDgv();
+            LoadDgv();
         }
 
         private void ActualizarCliente_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace OrdenVentas
 
                 MessageBox.Show($"Contacto {clienteParams["IDCLIENTE"]} actualizado correctamente");
 
-                LoadClientesDgv();
+                LoadDgv();
             }
             catch (Exception ex)
             {
@@ -62,7 +62,7 @@ namespace OrdenVentas
             }
         }
 
-        private void LoadClientesDgv()
+        private void LoadDgv()
         {
             try
             {

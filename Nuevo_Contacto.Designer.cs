@@ -100,20 +100,20 @@
             this.ClientesDgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.ClientesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientesDgv.Location = new System.Drawing.Point(8, 254);
-            this.ClientesDgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientesDgv.Margin = new System.Windows.Forms.Padding(2);
             this.ClientesDgv.Name = "ClientesDgv";
             this.ClientesDgv.ReadOnly = true;
             this.ClientesDgv.RowHeadersWidth = 62;
             this.ClientesDgv.RowTemplate.Height = 33;
             this.ClientesDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ClientesDgv.Size = new System.Drawing.Size(728, 217);
+            this.ClientesDgv.Size = new System.Drawing.Size(725, 204);
             this.ClientesDgv.TabIndex = 1;
             this.ClientesDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientesDgv_CellClick);
             // 
             // AgregarCliente
             // 
             this.AgregarCliente.Location = new System.Drawing.Point(382, 167);
-            this.AgregarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AgregarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.AgregarCliente.Name = "AgregarCliente";
             this.AgregarCliente.Size = new System.Drawing.Size(100, 47);
             this.AgregarCliente.TabIndex = 2;
@@ -124,7 +124,7 @@
             // ActualizarCliente
             // 
             this.ActualizarCliente.Location = new System.Drawing.Point(501, 167);
-            this.ActualizarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActualizarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.ActualizarCliente.Name = "ActualizarCliente";
             this.ActualizarCliente.Size = new System.Drawing.Size(100, 47);
             this.ActualizarCliente.TabIndex = 3;
@@ -135,7 +135,7 @@
             // NuevaEntrada
             // 
             this.NuevaEntrada.Location = new System.Drawing.Point(617, 167);
-            this.NuevaEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NuevaEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.NuevaEntrada.Name = "NuevaEntrada";
             this.NuevaEntrada.Size = new System.Drawing.Size(100, 47);
             this.NuevaEntrada.TabIndex = 4;
@@ -216,7 +216,7 @@
             // tbcodigo_nc
             // 
             this.tbcodigo_nc.Location = new System.Drawing.Point(120, 9);
-            this.tbcodigo_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcodigo_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbcodigo_nc.Name = "tbcodigo_nc";
             this.tbcodigo_nc.ReadOnly = true;
             this.tbcodigo_nc.Size = new System.Drawing.Size(233, 20);
@@ -226,7 +226,7 @@
             // tbnombre_nc
             // 
             this.tbnombre_nc.Location = new System.Drawing.Point(120, 60);
-            this.tbnombre_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnombre_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbnombre_nc.Name = "tbnombre_nc";
             this.tbnombre_nc.Size = new System.Drawing.Size(233, 20);
             this.tbnombre_nc.TabIndex = 13;
@@ -235,7 +235,7 @@
             // tbnum_documento_nc
             // 
             this.tbnum_documento_nc.Location = new System.Drawing.Point(120, 111);
-            this.tbnum_documento_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnum_documento_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tbnum_documento_nc.Name = "tbnum_documento_nc";
             this.tbnum_documento_nc.Size = new System.Drawing.Size(233, 20);
             this.tbnum_documento_nc.TabIndex = 15;
@@ -244,7 +244,7 @@
             // tb_direccion_nc
             // 
             this.tb_direccion_nc.Location = new System.Drawing.Point(120, 135);
-            this.tb_direccion_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_direccion_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_direccion_nc.Name = "tb_direccion_nc";
             this.tb_direccion_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_direccion_nc.TabIndex = 16;
@@ -253,7 +253,7 @@
             // tb_telefono_nc
             // 
             this.tb_telefono_nc.Location = new System.Drawing.Point(120, 159);
-            this.tb_telefono_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_telefono_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_telefono_nc.Name = "tb_telefono_nc";
             this.tb_telefono_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_telefono_nc.TabIndex = 17;
@@ -262,7 +262,7 @@
             // tb_correo_nc
             // 
             this.tb_correo_nc.Location = new System.Drawing.Point(120, 183);
-            this.tb_correo_nc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_correo_nc.Margin = new System.Windows.Forms.Padding(2);
             this.tb_correo_nc.Name = "tb_correo_nc";
             this.tb_correo_nc.Size = new System.Drawing.Size(233, 20);
             this.tb_correo_nc.TabIndex = 18;
@@ -338,7 +338,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Nuevo_Contacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choreto App";
