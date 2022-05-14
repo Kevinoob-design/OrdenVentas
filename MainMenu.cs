@@ -20,13 +20,6 @@ namespace OrdenVentas
             InitializeComponent();
         }
 
-        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Consulta_Contacto nConsultaC = new Consulta_Contacto();
-            nConsultaC.Show();
-            this.Hide();
-        }
-
         private void nuevoClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Nuevo_Contacto nCliente = new Nuevo_Contacto();
@@ -43,10 +36,10 @@ namespace OrdenVentas
 
         //private void consultaCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
         //{
-         //  consulta_categoria nVolver_cctg = new consulta_categoria();
-          // nVolver_cctg.Show();
-          // this.Hide();
-       // }
+        //  consulta_categoria nVolver_cctg = new consulta_categoria();
+        // nVolver_cctg.Show();
+        // this.Hide();
+        // }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
@@ -55,10 +48,10 @@ namespace OrdenVentas
 
         //private void nuevaCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
         //{
-            //nueva_categoria nVolver_nctg = new nueva_categoria();
-            //nVolver_nctg.Show();
-            //this.Hide();
-       // }
+        //nueva_categoria nVolver_nctg = new nueva_categoria();
+        //nVolver_nctg.Show();
+        //this.Hide();
+        // }
 
         private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
         {

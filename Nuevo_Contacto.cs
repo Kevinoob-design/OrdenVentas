@@ -24,13 +24,6 @@ namespace OrdenVentas
             this.Hide();
         }
 
-        private void consultaClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Consulta_Contacto nVolver_CC = new Consulta_Contacto();
-            nVolver_CC.Show();
-            this.Hide();
-        }
-
         private void AgregarCliente_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);

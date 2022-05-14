@@ -86,15 +86,14 @@
             this.consultaClienteToolStripMenuItem.Name = "consultaClienteToolStripMenuItem";
             this.consultaClienteToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.consultaClienteToolStripMenuItem.Text = "Consulta Contacto";
-            this.consultaClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaClienteToolStripMenuItem_Click);
             // 
             // ClientesDgv
             // 
             this.ClientesDgv.AllowUserToAddRows = false;
             this.ClientesDgv.AllowUserToDeleteRows = false;
             this.ClientesDgv.AllowUserToOrderColumns = true;
-            this.ClientesDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ClientesDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientesDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.ClientesDgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
