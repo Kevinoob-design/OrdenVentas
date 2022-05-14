@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consulta_Contacto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consulta_Contacto.Designer.cs">
-      <DependentUpon>Consulta_Contacto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Detalle_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +97,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Consulta_Contacto.resx">
-      <DependentUpon>Consulta_Contacto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </EmbeddedResource>

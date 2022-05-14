@@ -1,6 +1,5 @@
 ﻿using System;
 using Libs;
-using System;
 using OV_Entidad;
 using OV_Negocio;
 using System.Windows.Forms;
@@ -118,6 +117,8 @@ namespace OrdenVentas
 
         private void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex <= 0) return;
+
             DataGridView cell = (DataGridView)sender;
 
             Articulo articulo = new Articulo();
