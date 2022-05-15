@@ -136,8 +136,9 @@
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(286, 34);
-            this.productosToolStripMenuItem1.Text = "Estadisticas de Ventas";
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.productosToolStripMenuItem1.Text = "Reporte de ventas";
+            this.productosToolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem1_Click);
             // 
             // terminaSesionToolStripMenuItem
             // 
@@ -150,7 +151,7 @@
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
