@@ -25,7 +25,7 @@ namespace OrdenVentas
 
             UsuarioDto usuarioDto = new UsuarioDto();
 
-            bool isUsuarioLogedIn = usuarioDto.login(usuarioParams);
+            bool isUsuarioLogedIn = usuarioDto.Login(usuarioParams);
 
             if (isUsuarioLogedIn)
             {

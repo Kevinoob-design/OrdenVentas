@@ -28,7 +28,7 @@ namespace OrdenVentas
             {
                 Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
 
-                CategoriaDto dto = new CategoriaDto();
+                ContactoDto dto = new ContactoDto();
 
                 dto.Guardar(StoredProcedures.guardarCategoria, parameters, "IDCATEGORIA");
 
@@ -46,7 +46,7 @@ namespace OrdenVentas
             {
                 Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
 
-                CategoriaDto dto = new CategoriaDto();
+                ContactoDto dto = new ContactoDto();
 
                 dto.Actualizar(StoredProcedures.actualizarCategoria, parameters, "IDCATEGORIA");
 
@@ -71,7 +71,7 @@ namespace OrdenVentas
         {
             try
             {
-                CategoriaDto dto = new CategoriaDto();
+                ContactoDto dto = new ContactoDto();
 
                 dataGridView_nctg.DataSource = dto.ConsultarToDs(StoredProcedures.consultarCategoria, Tables.CATEGORIA);
 

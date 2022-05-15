@@ -5,15 +5,15 @@ using OV_Entidad;
 
 namespace OV_Negocio
 {
-    public class UsuarioDto
+    public class UsuarioDto : BaseDto
     {
-        public bool login(Dictionary<string, string> usuarioParams)
+        public bool Login(Dictionary<string, string> usuarioParams)
         {
             if (!usuarioParams.ContainsKey("USUARIO")) throw new Exception("La propiedad de usuario debe estar presente");
 
             if (!usuarioParams.ContainsKey("PASSWORD")) throw new Exception("La propiedad de password debe estar presente");
 
-            string spNameLogin = StoredProcedures.consultarUsuario.ToString();
+            string spNameLogin = StoredProcedures.login.ToString();
 
             List<Usuario> usuario = DbAdapter.LoadDataFromSp<Usuario>(spNameLogin, usuarioParams);
 

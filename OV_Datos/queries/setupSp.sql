@@ -110,7 +110,8 @@ create proc guardarVenta
     @FECHA_HORA DATETIME,
     @IMPUESTO FLOAT,
     @TOTAL FLOAT,
-    @ESTADO VARCHAR(20) 
+    @ESTADO VARCHAR(20) = 'Validada',
+	@DESCUENTO FLOAT
 as
 
 DECLARE @IDVENTA INT;
@@ -122,16 +123,26 @@ SET @IDVENTA = SCOPE_IDENTITY()
 
 select PRECIO_VENTA from ARTICULO where IDARTICULO = @IDARTICULO
 
-exec guardarDetalleVenta @IDVENTA, @IDARTICULO, PRECIO_VENTA, 0
+exec guardarDetalleVenta @IDVENTA, @IDARTICULO, PRECIO_VENTA, @DESCUENTO
 go
 
-create proc consultarUsuario
+create proc login
 
 	@USUARIO VARCHAR(100),
 	@PASSWORD VARCHAR(25)
 
 as
 	select * from USUARIO where USUARIO = @USUARIO and PASSWORD = CONVERT(VARBINARY, @PASSWORD)
+go
+
+create proc consultarUsuario
+
+	@ID INT = null
+as
+	if @ID is not null
+		select * from USUARIO where IDUSUARIO = @ID
+	else
+		select * from USUARIO
 go
 
 create proc consultarClientes

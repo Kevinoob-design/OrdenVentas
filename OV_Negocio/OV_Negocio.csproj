@@ -45,7 +45,7 @@
     <Compile Include="VentaDto.cs" />
     <Compile Include="BaseDto.cs" />
     <Compile Include="ArticuloDto.cs" />
-    <Compile Include="CategoriaDto.cs" />
+    <Compile Include="ContactoDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClienteDto.cs" />
     <Compile Include="UsuarioDto.cs" />
