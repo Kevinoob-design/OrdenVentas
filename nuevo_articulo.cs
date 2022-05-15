@@ -32,7 +32,7 @@ namespace OrdenVentas
 
                 parameters["IDCATEGORIA"] = categorias.Find(categoria => categoria.NOMBRE == parameters["IDCATEGORIA"]).IDCATEGORIA.ToString();
 
-                CategoriaDto dto = new CategoriaDto();
+                ContactoDto dto = new ContactoDto();
 
                 dto.Guardar(StoredProcedures.guardarArticulo, parameters, "IDARTICULO");
 
@@ -77,7 +77,7 @@ namespace OrdenVentas
         {
             try
             {
-                CategoriaDto dto = new CategoriaDto();
+                ContactoDto dto = new ContactoDto();
 
                 categorias = dto.Consultar<Categoria>(StoredProcedures.consultarCategoria);
 

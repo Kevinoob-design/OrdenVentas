@@ -2,7 +2,7 @@
 {
     public enum StoredProcedures
     {
-        consultarUsuario = 1,
+        login = 1,
         guardarCategoria = 2,
         guardarArticulo = 3,
         guardarCliente = 4,
@@ -15,6 +15,7 @@
         consultarCategoria = 11,
         actualizarCategoria = 12,
         consultarArticulo = 13,
-        actualizarArticulo = 14
+        actualizarArticulo = 14,
+        consultarUsuario = 15
     }
 }

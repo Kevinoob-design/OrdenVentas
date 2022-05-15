@@ -4,6 +4,7 @@
     {
         public int IDUSUARIO { get; set; }
         public int IDROL { get; set; }
+        public string NOMBRE { get; set; }
         public string USUARIO { get; set; }
         public string NUM_DOCUMENTO { get; set; }
         public string DIRECCION { get; set; }

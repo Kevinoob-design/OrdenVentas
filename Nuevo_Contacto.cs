@@ -79,7 +79,7 @@ namespace OrdenVentas
 
             DataGridView cell = (DataGridView)sender;
 
-            Cliente cliente = new Cliente();
+            Contacto cliente = new Contacto();
 
             foreach (DataGridViewCell item in cell.Rows[e.RowIndex].Cells)
             {
@@ -94,7 +94,7 @@ namespace OrdenVentas
 
         private void NuevaEntrada_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
+            Contacto cliente = new Contacto();
 
             Utils.SetControlsChildWithValueFromCollection(cliente, MantenimientoClientePanel);
         }

@@ -1,6 +1,6 @@
 ﻿namespace OV_Entidad
 {
-    public struct Cliente
+    public struct Contacto
     {
         public int IDCLIENTE { get; set; }
         public string TIPO_CLIENTE { get; set; }

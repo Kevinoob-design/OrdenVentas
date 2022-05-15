@@ -46,7 +46,7 @@
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="Venta.cs" />
     <Compile Include="Rol.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="Contacto.cs" />
     <Compile Include="Articulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Categoria.cs" />
