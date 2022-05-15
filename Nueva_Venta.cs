@@ -11,12 +11,12 @@ namespace OrdenVentas
     {
         private List<Contacto> contactos = new List<Contacto>();
         private List<Usuario> usuarios = new List<Usuario>();
+        private List<Articulo> articulos = new List<Articulo>();
 
         public Nueva_Venta()
         {
             InitializeComponent();
-            LoadContactos();
-            LoadDgv();
+            LoadAll();
         }
 
         private void volverAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,9 +37,19 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(VentaGroupBx);
+                Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(VentaGroupBx);
 
-                parameters["IDUSUARIO"] = usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
+                parameters["IDUSUARIO"] = "1"; // usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
+
+                parameters["IDCLIENTE"] = contactos.Find(contacto => contacto.NOMBRE == parameters["IDCLIENTE"]).IDCLIENTE.ToString();
+
+                Articulo articulo = articulos.Find(usuario => usuario.NOMBRE == parameters["IDARTICULO"]);
+
+                parameters["IDARTICULO"] = articulo.IDARTICULO.ToString();
+
+                parameters["TOTAL"] = (articulo.PRECIO_VENTA - Convert.ToInt32(parameters["DESCUENTO"])).ToString();
+
+                // parameters["FECHA_HORA"] = DateTime.Now.ToString("dd/MM/yyyy");
 
                 ContactoDto dto = new ContactoDto();
 
@@ -65,6 +75,21 @@ namespace OrdenVentas
             Utils.SetControlsChildWithValueFromCollection(venta, VentaGroupBx);
         }
 
+        private void LoadAll()
+        {
+            try
+            {
+                LoadUsuarios();
+                LoadContactos();
+                LoadArticulos();
+                LoadDgv();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void LoadContactos()
         {
             try
@@ -73,14 +98,33 @@ namespace OrdenVentas
 
                 contactos = dto.Consultar<Contacto>(StoredProcedures.consultarClientes);
 
-                usuarios = dto.Consultar<Usuario>(StoredProcedures.consultarUsuario);
-
                 Dictionary<int, string> parameters = new Dictionary<int, string>();
 
                 foreach (Contacto contacto in contactos)
                 {
                     parameters.Add(contacto.IDCLIENTE, contacto.NOMBRE);
                 }
+
+                comboClientes.DataSource = new BindingSource(parameters, null);
+
+                comboClientes.DisplayMember = "Value";
+                comboClientes.ValueMember = "Key";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadUsuarios()
+        {
+            try
+            {
+                ContactoDto dto = new ContactoDto();
+
+                usuarios = dto.Consultar<Usuario>(StoredProcedures.consultarUsuario);
+
+                Dictionary<int, string> parameters = new Dictionary<int, string>();
 
                 foreach (Usuario usuario in usuarios)
                 {
@@ -91,8 +135,32 @@ namespace OrdenVentas
 
                 comboVendedor.DisplayMember = "Value";
                 comboVendedor.ValueMember = "Key";
-                comboClientes.DisplayMember = "Value";
-                comboClientes.ValueMember = "Key";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadArticulos()
+        {
+            try
+            {
+                ArticuloDto dto = new ArticuloDto();
+
+                articulos = dto.Consultar<Articulo>(StoredProcedures.consultarArticulo);
+
+                Dictionary<int, string> parameters = new Dictionary<int, string>();
+
+                foreach (Articulo articulo in articulos)
+                {
+                    parameters.Add(articulo.IDARTICULO, articulo.NOMBRE);
+                }
+
+                comboBoxArticulos.DataSource = new BindingSource(parameters, null);
+
+                comboBoxArticulos.DisplayMember = "Value";
+                comboBoxArticulos.ValueMember = "Key";
             }
             catch (Exception ex)
             {

@@ -192,6 +192,7 @@
             this.comboBox_tipo_comp.Name = "comboBox_tipo_comp";
             this.comboBox_tipo_comp.Size = new System.Drawing.Size(109, 21);
             this.comboBox_tipo_comp.TabIndex = 14;
+            this.comboBox_tipo_comp.Tag = "TIPO_COMPROBANTE";
             // 
             // tb_idventa_nv
             // 
@@ -353,6 +354,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 26;
+            this.textBox1.Tag = "NUM_COMPROBANTE";
             this.textBox1.Text = "B0200540";
             // 
             // comboClientes

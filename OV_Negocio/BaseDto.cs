@@ -8,13 +8,13 @@ namespace OV_Negocio
 {
     public class BaseDto
     {
-        public List<T> Consultar<T>(StoredProcedures sp, Dictionary<string, string> paramsDto = null) where T : new()
+        public List<T> Consultar<T>(StoredProcedures sp, Dictionary<dynamic, string> paramsDto = null) where T : new()
         {
             string spExec = sp.ToString();
 
             return DbAdapter.LoadDataFromSp<T>(spExec, paramsDto);
         }
-        public DataSet ConsultarToDs(StoredProcedures sp, Tables table, Dictionary<string, string> paramsDto = null)
+        public DataSet ConsultarToDs(StoredProcedures sp, Tables table, Dictionary<dynamic, string> paramsDto = null)
         {
             string tableConsult = table.ToString();
             string spExec = sp.ToString();
@@ -22,7 +22,7 @@ namespace OV_Negocio
             return DbAdapter.LoadBackToDataSetWithSp(tableConsult, spExec, paramsDto);
         }
 
-        public void Guardar(StoredProcedures sp, Dictionary<string, string> paramsDto, string keyId = "")
+        public void Guardar(StoredProcedures sp, Dictionary<dynamic, string> paramsDto, string keyId = "")
         {
             if (paramsDto.ContainsKey(keyId)) paramsDto.Remove(keyId);
             string spExec = sp.ToString();
@@ -30,7 +30,7 @@ namespace OV_Negocio
             DbAdapter.ExecSp(spExec, paramsDto);
         }
 
-        public void Actualizar(StoredProcedures sp, Dictionary<string, string> paramsDto, string keyId = "")
+        public void Actualizar(StoredProcedures sp, Dictionary<dynamic, string> paramsDto, string keyId = "")
         {
             if (!paramsDto.ContainsKey(keyId)) throw new Exception("El ID del cliente es requerido");
             string spExec = sp.ToString();

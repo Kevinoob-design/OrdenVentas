@@ -21,7 +21,7 @@ namespace OrdenVentas
         private void bacceso_Click(object sender, EventArgs e)
         {
 
-            Dictionary<string, string> usuarioParams = Utils.GetCollectionKeyValueFromControlsTags(LoginPanel);
+            Dictionary<dynamic, string> usuarioParams = Utils.GetCollectionKeyValueFromControlsTags(LoginPanel);
 
             UsuarioDto usuarioDto = new UsuarioDto();
 

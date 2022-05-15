@@ -7,9 +7,9 @@ namespace Libs
 {
     public static class Utils
     {
-        public static Dictionary<string, string> GetCollectionKeyValueFromControlsTags(params Control[] controls)
+        public static Dictionary<dynamic, string> GetCollectionKeyValueFromControlsTags(params Control[] controls)
         {
-            Dictionary<string, string> collection = new Dictionary<string, string>();
+            Dictionary<dynamic, string> collection = new Dictionary<dynamic, string>();
 
             foreach (var control in controls)
             {

@@ -26,7 +26,7 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
+                Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
 
                 ContactoDto dto = new ContactoDto();
 
@@ -44,7 +44,7 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
+                Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(CategoriaPanel);
 
                 ContactoDto dto = new ContactoDto();
 
@@ -85,7 +85,7 @@ namespace OrdenVentas
 
         private void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex <= 0) return;
+            if (e.RowIndex < 0) return;
 
             DataGridView cell = (DataGridView)sender;
 

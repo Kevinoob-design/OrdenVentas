@@ -28,7 +28,7 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(ArticuloGroupBox);
+                Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(ArticuloGroupBox);
 
                 parameters["IDCATEGORIA"] = categorias.Find(categoria => categoria.NOMBRE == parameters["IDCATEGORIA"]).IDCATEGORIA.ToString();
 
@@ -48,7 +48,7 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(ArticuloGroupBox);
+                Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(ArticuloGroupBox);
 
                 parameters["IDCATEGORIA"] = categorias.Find(categoria => categoria.NOMBRE == parameters["IDCATEGORIA"]).IDCATEGORIA.ToString();
 
@@ -117,7 +117,7 @@ namespace OrdenVentas
 
         private void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex <= 0) return;
+            if (e.RowIndex < 0) return;
 
             DataGridView cell = (DataGridView)sender;
 

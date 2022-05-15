@@ -26,7 +26,7 @@ namespace OrdenVentas
 
         private void AgregarCliente_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);
+            Dictionary<dynamic, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);
 
             ClienteDto clienteDto = new ClienteDto();
 
@@ -39,7 +39,7 @@ namespace OrdenVentas
         {
             try
             {
-                Dictionary<string, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);
+                Dictionary<dynamic, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);
 
                 ClienteDto clienteDto = new ClienteDto();
 
@@ -75,7 +75,7 @@ namespace OrdenVentas
 
         private void ClientesDgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex <= 0) return;
+            if (e.RowIndex < 0) return;
 
             DataGridView cell = (DataGridView)sender;
 

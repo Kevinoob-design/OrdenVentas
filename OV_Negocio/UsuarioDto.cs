@@ -7,7 +7,7 @@ namespace OV_Negocio
 {
     public class UsuarioDto : BaseDto
     {
-        public bool Login(Dictionary<string, string> usuarioParams)
+        public bool Login(Dictionary<dynamic, string> usuarioParams)
         {
             if (!usuarioParams.ContainsKey("USUARIO")) throw new Exception("La propiedad de usuario debe estar presente");
 

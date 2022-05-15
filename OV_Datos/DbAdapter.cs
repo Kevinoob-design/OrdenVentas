@@ -34,7 +34,7 @@ namespace OV_Datos
             return Read<T>(dr);
         }
 
-        public static List<T> LoadDataFromSp<T>(string spName, Dictionary<string, string> spParams = null) where T : new()
+        public static List<T> LoadDataFromSp<T>(string spName, Dictionary<dynamic, string> spParams = null) where T : new()
         {
             SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
@@ -43,7 +43,7 @@ namespace OV_Datos
             return Read<T>(dr);
         }
 
-        public static void ExecSp(string spName, Dictionary<string, string> spParams = null)
+        public static void ExecSp(string spName, Dictionary<dynamic, string> spParams = null)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace OV_Datos
             }
         }
 
-        private static SqlCommand PrepareCmd(string commandText, CommandType commandType, Dictionary<string, string> parameters = null)
+        private static SqlCommand PrepareCmd(string commandText, CommandType commandType, Dictionary<dynamic, string> parameters = null)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = commandType;
@@ -93,7 +93,7 @@ namespace OV_Datos
             return listOfItems;
         }
 
-        public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<string, string> spParams = null)
+        public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<dynamic, string> spParams = null)
         {
             SqlCommand cmd = PrepareCmd(spName, CommandType.StoredProcedure, spParams);
 
