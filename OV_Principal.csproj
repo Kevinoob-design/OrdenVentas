@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="iTextSharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <HintPath>packages\iTextSharp-LGPL.4.1.6\lib\iTextSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -52,12 +55,6 @@
     </Compile>
     <Compile Include="Detalle_Ventas.Designer.cs">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Estadisticas_Ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas_Ventas.Designer.cs">
-      <DependentUpon>Estadisticas_Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -97,11 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utilidades\Comun.cs" />
+    <Compile Include="utilidades\Reporte.cs" />
+    <Compile Include="utilidades\ReporteColumna.cs" />
+    <Compile Include="utilidades\ReportePagina.cs" />
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas_Ventas.resx">
-      <DependentUpon>Estadisticas_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -130,6 +128,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,6 +159,12 @@
       <Project>{ec6827db-f5e9-478e-97d7-ea1e995cac4f}</Project>
       <Name>OV_Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="reporte\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagen\logotipo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
