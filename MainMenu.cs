@@ -81,11 +81,11 @@ namespace OrdenVentas
             this.Hide();
         }
 
-        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Estadisticas_Ventas nVolver_ev = new Estadisticas_Ventas();
-            nVolver_ev.Show();
-            this.Hide();
-        }
+        //private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        //{
+        //    Estadisticas_Ventas nVolver_ev = new Estadisticas_Ventas();
+        //    nVolver_ev.Show();
+        //    this.Hide();
+        //}
     }
 }
