@@ -59,8 +59,7 @@ set
 	DIRECCION = @DIRECCION,
 	TELEFONO = @TELEFONO,
 	EMAIL = @EMAIL
-
-	where IDCLIENTE = @IDCLIENTE
+	where IDCLIENTE = @IDCLIENTE;
 go
 
 create proc actualizarCategoria
@@ -75,7 +74,6 @@ set
 	NOMBRE = @NOMBRE,
 	DESCRIPCION = @DESCRIPCION,
 	ESTADO = @ESTADO
-
 	where IDCATEGORIA = @IDCATEGORIA
 go
 
@@ -125,7 +123,7 @@ select PRECIO_VENTA from ARTICULO where IDARTICULO = @IDARTICULO
 exec guardarDetalleVenta @IDVENTA, @IDARTICULO, PRECIO_VENTA, @DESCUENTO
 go
 
-create proc login
+create proc [login]
 
 	@USUARIO VARCHAR(100),
 	@PASSWORD VARCHAR(25)
@@ -204,6 +202,5 @@ set
 	STOCK = @STOCK,
 	DESCRIPCION = @DESCRIPCION,
 	ESTADO = @ESTADO
-
 	where IDARTICULO = @IDARTICULO
 go

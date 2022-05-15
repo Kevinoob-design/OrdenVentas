@@ -39,7 +39,7 @@ namespace OrdenVentas
             {
                 Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(VentaGroupBx);
 
-                parameters["IDUSUARIO"] = "1"; // usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
+                parameters["IDUSUARIO"] = "3"; // usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
 
                 parameters["IDCLIENTE"] = contactos.Find(contacto => contacto.NOMBRE == parameters["IDCLIENTE"]).IDCLIENTE.ToString();
 
