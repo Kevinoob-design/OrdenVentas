@@ -1,6 +1,6 @@
 use OrdenVentasDB
 go
 
-select * from CLIENTES
+select * from CONTACTOS
 
 select * from USUARIO

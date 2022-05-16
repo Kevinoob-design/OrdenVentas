@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Libs;
+using OV_Entidad;
+using OV_Negocio;
 using System.Windows.Forms;
 
 namespace OrdenVentas
@@ -15,6 +12,7 @@ namespace OrdenVentas
         public Detalle_Ventas()
         {
             InitializeComponent();
+            LoadDgv();
         }
 
         private void volverAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,6 +27,22 @@ namespace OrdenVentas
             Nueva_Venta nVolver_nvent = new Nueva_Venta();
             nVolver_nvent.Show();
             this.Hide();
+        }
+
+        private void LoadDgv()
+        {
+            try
+            {
+                DetalleVentaDto dto = new DetalleVentaDto();
+
+                dgv.DataSource = dto.ConsultarToDs(StoredProcedures.consultarDetalleVentas, Tables.VENTA);
+
+                dgv.DataMember = Tables.VENTA.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

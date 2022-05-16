@@ -2,8 +2,8 @@
 {
     public struct Contacto
     {
-        public int IDCLIENTE { get; set; }
-        public string TIPO_CLIENTE { get; set; }
+        public int IDCONTACTO { get; set; }
+        public string TIPO_CONTACTO { get; set; }
         public string NOMBRE { get; set; }
         public string TIPO_DOCUMENTO { get; set; }
         public string NUM_DOCUMENTO { get; set; }

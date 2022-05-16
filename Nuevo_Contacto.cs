@@ -24,18 +24,18 @@ namespace OrdenVentas
             this.Hide();
         }
 
-        private void AgregarCliente_Click(object sender, EventArgs e)
+        private void AgregarContacto_Click(object sender, EventArgs e)
         {
             Dictionary<dynamic, string> clienteParams = Utils.GetCollectionKeyValueFromControlsTags(MantenimientoClientePanel);
 
             ClienteDto clienteDto = new ClienteDto();
 
-            clienteDto.Guardar(StoredProcedures.guardarCliente, clienteParams, "IDCLIENTE");
+            clienteDto.Guardar(StoredProcedures.guardarContacto, clienteParams, "IDCONTACTO");
 
             LoadDgv();
         }
 
-        private void ActualizarCliente_Click(object sender, EventArgs e)
+        private void ActualizarContacto_Click(object sender, EventArgs e)
         {
             try
             {
@@ -43,9 +43,9 @@ namespace OrdenVentas
 
                 ClienteDto clienteDto = new ClienteDto();
 
-                clienteDto.Actualizar(StoredProcedures.actualizarCliente, clienteParams, "IDCLIENTE");
+                clienteDto.Actualizar(StoredProcedures.actualizarContacto, clienteParams, "IDCONTACTO");
 
-                MessageBox.Show($"Contacto {clienteParams["IDCLIENTE"]} actualizado correctamente");
+                MessageBox.Show($"Contacto {clienteParams["IDCONTACTO"]} actualizado correctamente");
 
                 LoadDgv();
             }
@@ -61,9 +61,9 @@ namespace OrdenVentas
             {
                 ClienteDto clienteDto = new ClienteDto();
 
-                ClientesDgv.DataSource = clienteDto.ConsultarToDs(StoredProcedures.consultarClientes, Tables.CLIENTES);
+                ClientesDgv.DataSource = clienteDto.ConsultarToDs(StoredProcedures.consultarContactos, Tables.CONTACTOS);
 
-                string tableConsultarClientes = Tables.CLIENTES.ToString();
+                string tableConsultarClientes = Tables.CONTACTOS.ToString();
 
                 ClientesDgv.DataMember = tableConsultarClientes;
             }

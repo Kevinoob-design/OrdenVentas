@@ -179,6 +179,7 @@
             this.comboVendedor.Name = "comboVendedor";
             this.comboVendedor.Size = new System.Drawing.Size(109, 21);
             this.comboVendedor.TabIndex = 13;
+            this.comboVendedor.Tag = "IDUSUARIO";
             // 
             // comboBox_tipo_comp
             // 
@@ -366,7 +367,7 @@
             this.comboClientes.Name = "comboClientes";
             this.comboClientes.Size = new System.Drawing.Size(109, 21);
             this.comboClientes.TabIndex = 25;
-            this.comboClientes.Tag = "IDCLIENTE";
+            this.comboClientes.Tag = "IDCONTACTO";
             // 
             // dgv
             // 

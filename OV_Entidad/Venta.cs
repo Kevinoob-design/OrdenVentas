@@ -5,7 +5,7 @@ namespace OV_Entidad
     public struct Venta
     {
         public int IDVENTA { get; set; }
-        public int IDCLIENTE { get; set; }
+        public int IDCONTACTO { get; set; }
         public int IDUSUARIO { get; set; }
         public string TIPO_COMPROBANTE { get; set; }
         public string SERIE_COMPROBANTE { get; set; }

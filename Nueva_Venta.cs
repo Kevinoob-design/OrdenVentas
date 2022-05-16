@@ -39,9 +39,9 @@ namespace OrdenVentas
             {
                 Dictionary<dynamic, string> parameters = Utils.GetCollectionKeyValueFromControlsTags(VentaGroupBx);
 
-                parameters["IDUSUARIO"] = "3"; // usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
+                parameters["IDUSUARIO"] = usuarios.Find(usuario => usuario.NOMBRE == parameters["IDUSUARIO"]).IDUSUARIO.ToString();
 
-                parameters["IDCLIENTE"] = contactos.Find(contacto => contacto.NOMBRE == parameters["IDCLIENTE"]).IDCLIENTE.ToString();
+                parameters["IDCONTACTO"] = contactos.Find(contacto => contacto.NOMBRE == parameters["IDCONTACTO"]).IDCONTACTO.ToString();
 
                 Articulo articulo = articulos.Find(usuario => usuario.NOMBRE == parameters["IDARTICULO"]);
 
@@ -96,13 +96,13 @@ namespace OrdenVentas
             {
                 ContactoDto dto = new ContactoDto();
 
-                contactos = dto.Consultar<Contacto>(StoredProcedures.consultarClientes);
+                contactos = dto.Consultar<Contacto>(StoredProcedures.consultarContactos);
 
                 Dictionary<int, string> parameters = new Dictionary<int, string>();
 
                 foreach (Contacto contacto in contactos)
                 {
-                    parameters.Add(contacto.IDCLIENTE, contacto.NOMBRE);
+                    parameters.Add(contacto.IDCONTACTO, contacto.NOMBRE);
                 }
 
                 comboClientes.DataSource = new BindingSource(parameters, null);

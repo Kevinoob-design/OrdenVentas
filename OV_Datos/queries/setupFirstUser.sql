@@ -1,10 +1,13 @@
 use OrdenVentasDB
 go
 
-exec guardarRol 'Admin', 'Usuario Maestro'
+exec guardarRol 'Admin', 'Vendedor'
 
 insert into USUARIO
-values(1, 'Admin', CONVERT(VARBINARY, 'Admin'), '402-1234567-8', 'Calle 1 A', '809-123-4567', 'admin@email.com', 1)
+values(1, 'Admin', CONVERT(varbinary, 'Admin'), 'Hector', '123456780', 'Calle 1A', '849-123-4567', 'email@hotmail.com', 1)
 
-exec guardarCategoria 'Prueba 2', 'Categoria 1', 0
+exec consultarUsuario
 
+select * from DETALLE_VENTA
+
+exec consultarDetalleVentas
