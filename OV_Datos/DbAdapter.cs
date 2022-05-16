@@ -75,22 +75,32 @@ namespace OV_Datos
 
         private static List<T> Read<T>(SqlDataReader dr) where T : new()
         {
-            List<T> listOfItems = new List<T>();
-
-            while (dr.Read())
+            try
             {
-                T item = new T();
+                List<T> listOfItems = new List<T>();
 
-                for (int i = 0; i < dr.FieldCount; i++)
+                while (dr.Read())
                 {
-                    item = Utils.MapBoxedFromKeyValue(item, dr.GetName(i), dr.GetValue(i));
+                    T item = new T();
+
+                    for (int i = 0; i < dr.FieldCount; i++)
+                    {
+                        item = Utils.MapBoxedFromKeyValue(item, dr.GetName(i), dr.GetValue(i));
+                    }
+
+                    listOfItems.Add(item);
                 }
 
-                listOfItems.Add(item);
+                return listOfItems;
             }
-            dr.Close();
-
-            return listOfItems;
+            catch (SqlException ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                dr.Close();
+            }
         }
 
         public static DataSet LoadBackToDataSetWithSp(string srcTable, string spName, Dictionary<dynamic, string> spParams = null)
